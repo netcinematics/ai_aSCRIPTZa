@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Previous styles remain the same */
+    body {
+      background-color: black;
+      color: steelblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .text-container {
+      width: 80%;
+      max-width: 600px;
+      border: 2px solid aqua;
+      border-radius: 13px;
+      padding: 20px;
+      position: relative;
+    }
+
+    #text-display {
+      width: 100%;
+      height: 300px;
+      background-color: #111;
+      color: steelblue;
+      border: 1px solid aqua;
+      border-radius: 13px;
+      padding: 10px;
+      font-size: 16px;
+      resize: vertical;
+      box-sizing: border-box;
+      line-height: 1.5;
+    }
+
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .control-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    button {
+      background-color: #222;
+      color: steelblue;
+      border: 1px solid aqua;
+      border-radius: 13px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 100px;
+    }
+
+    button:hover {
+      background-color: #333;
+      color: aqua;
+    }
+
+    button.active {
+      background-color: #444;
+      color: aqua;
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    select, input[type="text"] {
+      background-color: #222;
+      color: steelblue;
+      border: 1px solid aqua;
+      border-radius: 13px;
+      padding: 8px;
+      cursor: pointer;
+      outline: none;
+      min-width: 120px;
+    }
+
+    select:hover, input[type="text"]:hover {
+      background-color: #333;
+    }
+
+    option {
+      background-color: #111;
+    }
+
+    .label {
+      color: steelblue;
+      font-size: 16px;
+      min-width: 50px;
+      text-align: center;
+    }
+
+    .title-display {
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .keyboard-hint {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="text-container">
+    <textarea id="text-display" spellcheck="false" readonly></textarea>
+    <div class="controls">
+      <div class="control-row">
+        <div class="speed-control">
+          <span class="label">Speed:</span>
+          <select id="speedSelect" onchange="updateScrollSpeed()">
+            <option value="0.10">0.10 sec</option>
+            <option value="0.25">0.25 sec</option>
+            <option value="0.50">0.50 sec</option>
+            <option value="0.75">0.75 sec</option>
+            <option value="1.00">1.00 sec</option>
+          </select>
+        </div>
+        <button id="autoScrollBtn" onclick="toggleAutoScroll()">Auto Scroll</button>
+      </div>
+      
+      <div class="control-row">
+        <button onclick="prevText()">Previous</button>
+        <div class="title-display" id="currentTitle">Untitled Document</div>
+        <button onclick="nextText()">Next</button>
+      </div>
+
+      <div class="control-row">
+        <input type="text" id="titleInput" placeholder="Enter title..." />
+        <button onclick="saveDocument()">Save</button>
+      </div>
+
+      <div class="keyboard-hint">Press SPACEBAR to toggle auto-scroll</div>
+    </div>
+  </div>
+
+  <script>
+    // Previous script content remains the same until the new additions
+    const docData = [];
+    for (let i = 1; i <= 100; i++) {
+      docData.push(`Line ${i}: This is sample text for line number ${i}. Adding some more content to make the line longer for better scroll visibility.`);
+    }
+
+    let currentIndex = 0;
+    let isScrolling = false;
+    let scrollInterval;
+    let scrollSpeed = 0.10;
+
+    function updateDisplay() {
+      const textDisplay = document.getElementById('text-display');
+      textDisplay.value = docData.join('\n');
+      textDisplay.scrollTop = 0;
+    }
+
+    function prevText() {
+      stopAutoScroll();
+      currentIndex = (currentIndex - 1 + docData.length) % docData.length;
+      updateDisplay();
+    }
+
+    function nextText() {
+      stopAutoScroll();
+      currentIndex = (currentIndex + 1) % docData.length;
+      updateDisplay();
+    }
+
+    function updateScrollSpeed() {
+      const speedSelect = document.getElementById('speedSelect');
+      scrollSpeed = parseFloat(speedSelect.value);
+      
+      if (isScrolling) {
+        stopAutoScroll();
+        toggleAutoScroll();
+      }
+    }
+
+    function toggleAutoScroll() {
+      const button = document.getElementById('autoScrollBtn');
+      const textDisplay = document.getElementById('text-display');
+      
+      if (!isScrolling) {
+        isScrolling = true;
+        button.classList.add('active');
+        button.textContent = 'Stop Scroll';
+        
+        const stepSize = 1;
+        const updateInterval = (scrollSpeed * 1000) / 20;
+        
+        scrollInterval = setInterval(() => {
+          if (textDisplay.scrollTop < (textDisplay.scrollHeight - textDisplay.clientHeight)) {
+            textDisplay.scrollTop += stepSize;
+          } else {
+            stopAutoScroll();
+          }
+        }, updateInterval);
+      } else {
+        stopAutoScroll();
+      }
+    }
+
+    function stopAutoScroll() {
+      isScrolling = false;
+      const button = document.getElementById('autoScrollBtn');
+      button.classList.remove('active');
+      button.textContent = 'Auto Scroll';
+      clearInterval(scrollInterval);
+    }
+
+    function saveDocument() {
+      const titleInput = document.getElementById('titleInput');
+      const currentTitle = document.getElementById('currentTitle');
+      const newTitle = titleInput.value.trim();
+      
+      if (newTitle) {
+        currentTitle.textContent = newTitle;
+        titleInput.value = '';
+        alert('Document saved as: ' + newTitle);
+      } else {
+        alert('Please enter a title');
+      }
+    }
+
+    // Add spacebar listener
+    document.addEventListener('keydown', function(event) {
+      // Check if the pressed key is spacebar and not in an input field
+      if (event.code === 'Space' && document.activeElement.tagName !== 'INPUT') {
+        event.preventDefault(); // Prevent page scroll
+        toggleAutoScroll();
+      }
+    });
+
+    // Initialize
+    window.onload = updateDisplay;
+  </script>
+</body>
+</html>
