@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Syntax Highlighting Textarea (Dark Theme)</title>
+<style>
+body {
+  background-color: black;
+  color: steelblue;
+}
+
+#editor {
+  width: 500px;
+  height: 200px;
+  border: 1px solid #333;
+  font-family: monospace;
+  overflow: auto;
+  white-space: pre-wrap;
+  padding: 5px;
+  background-color: #111;
+}
+
+.keyword {
+  color: lightblue;
+  font-weight: bold;
+}
+
+.string {
+  color: lightgreen;
+}
+
+.comment {
+  color: gray;
+}
+
+.x-red {
+  color: red;
+}
+
+.bracketed {
+  color: limegreen;
+}
+</style>
+</head>
+<body>
+
+<div id="editor" contenteditable="true"></div>
+
+<script>
+const editor = document.getElementById('editor');
+
+editor.addEventListener('keyup', highlightSyntax);
+
+function highlightSyntax() {
+  const text = editor.innerText;
+
+  const range = window.getSelection().getRangeAt(0);
+  const startOffset = range.startOffset;
+
+  const highlightedText = applySyntaxHighlighting(text);
+  editor.innerHTML = highlightedText;
+
+  restoreCursorPosition(startOffset);
+}
+
+function applySyntaxHighlighting(text) {
+  let highlighted = "";
+  const lines = text.split('\n');
+
+  for (const line of lines) {
+    let highlightedLine = "";
+    const words = line.split(/\s+/);
+
+    for (let word of words) {
+      let styledWord = word;
+
+      if (word.includes('X')) {
+        styledWord = word.replace(/X/g, '<span class="x-red">X</span>');
+      }
+
+      styledWord = styledWord.replace(/\[([^\]]+)\]/g, '<span class="bracketed">[$1]</span>');
+
+      if (isKeyword(word)) {
+        styledWord = `<span class="keyword">${word}</span>`;
+      } else if (isString(word)) {
+        styledWord = `<span class="string">${word}</span>`;
+      } else if (isComment(word)) {
+        styledWord = `<span class="comment">${word}</span>`;
+      }
+
+      highlightedLine += styledWord + " ";
+    }
+    highlighted += highlightedLine + "<br>";
+  }
+  return highlighted;
+}
+
+function isKeyword(word) {
+  const keywords = ["function", "var", "let", "const", "if", "else", "return"];
+  return keywords.includes(word);
+}
+
+function isString(word) {
+  return word.startsWith('"') && word.endsWith('"') || word.startsWith("'") && word.endsWith("'");
+}
+
+function isComment(word) {
+  return word.startsWith("//");
+}
+
+function restoreCursorPosition(offset) {
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  const range = document.createRange();
+
+  let currentNode = editor.firstChild;
+  let charCount = 0;
+  let lineCount = 0;
+
+  while (currentNode) {
+    if (currentNode.nodeType === Node.TEXT_NODE) {
+      const nodeLength = currentNode.textContent.length;
+      if (charCount + nodeLength >= offset) {
+        range.setStart(currentNode, offset - charCount);
+        range.setEnd(currentNode, offset - charCount);
+        break;
+      }
+      charCount += nodeLength;
+    } else if (currentNode.nodeName === 'BR') {
+      lineCount++; // Increment line count when encountering a <br> tag
+    }
+    currentNode = currentNode.nextSibling;
+  }
+
+  sel.addRange(range);
+}
+
+
+highlightSyntax();
+</script>
+
+</body>
+</html>

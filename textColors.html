@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Styled Textarea</title>
+<style>
+  #styledTextarea {
+    width: 300px;
+    height: 150px;
+    font-family: monospace; /* Important for consistent character positioning */
+    white-space: pre-wrap; /* Prevents text from overflowing */
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<textarea id="styledTextarea" oninput="styleText()" onchange="styleText()">abcde [fg] hai X tuxv</textarea>
+
+<script>
+function styleText() {
+  const textarea = document.getElementById('styledTextarea');
+  const text = textarea.value;
+  let styledText = "";
+
+  for (let i = 0; i < text.length; i++) {
+    const char = text[i];
+
+    if (char === 'X') {
+      styledText += '<span style="color: red;">X</span>';
+    } else if (char === '[' || char === ']') {
+      styledText += '<span style="color: green;">' + char + '</span>';
+    } else if (text[i-1] === '[' && text[i] !== ']' ) {
+       styledText += '<span style="color: green;">' + char + '</span>';
+    }
+     else {
+      styledText += char;
+    }
+  }
+
+  textarea.innerHTML = styledText; // Use innerHTML to apply styles
+}
+
+
+// Initial styling when the page loads
+styleText();
+
+</script>
+
+</body>
+</html>
