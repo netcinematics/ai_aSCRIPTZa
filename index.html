@@ -8,8 +8,9 @@ body {
     background-color: black;
     color: steelblue;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -37,6 +38,7 @@ flex-direction: column;
     display: flex;
     align-items: center;
     border: 1px solid #310131;
+    border-radius: 22px
 }
 
 .token-row:hover {
@@ -163,8 +165,9 @@ select {
     background-image: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.6) 26%, transparent 26%, transparent 51%, rgba(255, 255, 255, -0.4) 51%, rgba(255, 255, 255, 0.6) 74%, transparent 74%, transparent);
 }             
 
-.text-container {
+.app-frame {
     width: 90%;
+    height: 80vw;
     border: 2px solid aqua;
     border-radius: 13px;
     padding: 20px;
@@ -226,7 +229,7 @@ button.active {
 
 .control-group {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 8px;
 }
 
@@ -275,8 +278,22 @@ option {
 </head>
 <body  class="scrollBarV">
 
-<div class="text-container">
-    <h1 style="margin: 9px; display: flex; width: 100%; justify-content: center; font-size: 1.444em; color: purple;">aSCRIPTZa</h1>
+    
+    <h1 style="margin: 0px; display: flex; width: 100%; justify-content: center; 
+    font-size: 0.888em; color: steelblue;">aSCRIPTZa</h1>
+
+<article id="NAV_INFO" class="app-frame" style="display:none;">asdf</article>
+<article id="NAV_CREATE" class="app-frame" style="display:none;">fdsa</article>
+<article id="NAV_EDIT" class="app-frame" style="display:none;">qer</article>
+
+<article id="NAV_PLAYBACK" class="app-frame" style="display:block;>
+
+    <div class="control-group">
+        <label>TITLE:</label>
+        <input type="text" id="txtTitle" placeholder="Title..." style="    margin-bottom: 1em;">
+        </input>
+    </div>
+
     <section id="renderTokenFrame" class="scrollBarV"></section>
     <div class="controls">
 
@@ -301,7 +318,7 @@ option {
         <div class="control-row">
             <div class="controlBar" style="border:1px solid purple; border-radius:13px;">
 
-                <div class="controls-group">
+                <div class="controls-group" style="    margin-top: 2%;">
                     <label class="checkboxFrame">
                         <input id="selectAll" onchange="toggleAll(this)"type="checkbox" class="">
                         <span class="checkmark"></span>
@@ -354,12 +371,12 @@ option {
             <input type="text" id="titleInput" placeholder="Enter title..." />
             <button onclick="saveDocument()">Save</button>
           </div>
-          </div>
-          </div>
-    
-          <div class="keyboard-hint">Press SPACEBAR to toggle auto-scroll</div>
         </div>
+        </div>
+
+        <div class="keyboard-hint">Press SPACEBAR to toggle auto-scroll</div>
     </div>
+</article>
 <script>
     let TOKEN_DATASET = [
         {row: 1, txt: ["test [text] 1"], color: '', size: 2, height: 2},
@@ -372,7 +389,6 @@ option {
     let scrollTopFloat = 0.0;
     let checkboxStates = [];
     let isSelectAllChecked = false;
-
     let isUserScrolling = false;
 
     // Add scroll event listener
@@ -536,6 +552,74 @@ option {
             cb.checked = isSelectAllChecked;
         });
     }
+</script>
+
+<footer style="display:flex;justify-content:space-evenly;width:90%;margin:0 auto; 
+background-image: linear-gradient(grey, #052f52, black);height: 2em;
+align-items: center;
+box-shadow: 0 0 4px 2px steelblue;border-radius:13px;">
+      <button class="mainBtn" onclick="showINFO()" style="    height: 2em;
+    padding: 0;">
+         <span style="border-radius:100%;background:blue;
+           border:1px solid grey;">
+         💠</span><span class="btnTXT hoverTXT">INFO</span>
+      </button>
+       <button class="mainBtn" onclick="showCREATE()" style="    height: 2em;
+    padding: 0;">
+          <span style="border-radius:100%;background:lime;border:1px solid grey;">
+            🎇</span> <span class="btnTXT hoverTXT">CREATE</span>
+       </button>
+       <button class="mainBtn" onclick="showEDIT()" style="    height: 2em;
+    padding: 0;;">
+          <span style="border-radius:100%;background:aqua;border:1px solid grey;">
+            💫</span> <span class="btnTXT hoverTXT">EDIT</span>
+       </button>
+       <button class="mainBtn" onclick="showPLAYBACK()" style="    height: 2em;
+    padding: 0;">
+          <span style="border-radius:100%;background:purple;border:1px solid grey;">
+            🎭</span> <span class="btnTXT hoverTXT">PLAYBACK</span>
+       </button> 
+      </footer> 
+      <legal style="color:darkslategray;font-size: 0.666em;
+      display:flex;flex: 0 0 auto;">copyright 2020-
+      <span id="dateTXTStamp">2025</span>
+      <script>
+        const dateTXTStamp = document.getElementById('dateTXTStamp');
+        dateTXTStamp.innerHTML = new Date().getFullYear();</script>
+      
+      &nbsp; netcinematics.llc, all rights reserved.</legal>
+<script>
+const NAV_PLAYBACK = document.getElementById('NAV_PLAYBACK');
+const NAV_EDIT = document.getElementById('NAV_EDIT');
+const NAV_CREATE = document.getElementById('NAV_CREATE');
+const NAV_INFO = document.getElementById('NAV_INFO');
+function showINFO() {
+    NAV_INFO.style.display = 'block';
+    NAV_CREATE.style.display = 'none';
+    NAV_EDIT.style.display = 'none';
+    NAV_PLAYBACK.style.display = 'none';
+}
+
+function showCREATE() {
+    NAV_INFO.style.display = 'none';
+    NAV_CREATE.style.display = 'block';
+    NAV_EDIT.style.display = 'none';
+    NAV_PLAYBACK.style.display = 'none';
+}
+
+function showEDIT() {
+    NAV_INFO.style.display = 'none';
+    NAV_CREATE.style.display = 'none';
+    NAV_EDIT.style.display = 'block';
+    NAV_PLAYBACK.style.display = 'none';
+}
+
+function showPLAYBACK() {
+    NAV_INFO.style.display = 'none';
+    NAV_CREATE.style.display = 'none';
+    NAV_EDIT.style.display = 'none';
+    NAV_PLAYBACK.style.display = 'block';
+}
 </script>
 </body>
 </html>
