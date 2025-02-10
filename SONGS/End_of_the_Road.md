@@ -1,54 +1,102 @@
 # End of the road
 
-by spazefalcon 2025 MIT
+ - by spazefalcon 2025  ~ : ) MIT
 
+[FORM: a minor. 
+  - between Em and aminor. 
+  - then add G and dminor.
+  - also aminor to C and back.
+]
 
+[HUMAN_INPUT:]
+
+[I1]
 
 I was lost out on the road
 
-lost count so long ago
+lost count of days so long ago
 
 
-so many nights that I dont know
-
+[I2]
 
 I was laying in a field
 
-as a breeze blew across the wheat
+as a breeze blew across my cheek
 
-staring into the sun
+staring into the sunset
 
-til i forgot everyone
-
-strung out from the cold
-
-struck out on my own
+and the wind in a field of wheat
 
 
-I was down that way again,
+[P1]
 
-when i went to see an old friend
+(a) strung out from the cold (d,c, b)
 
-Is this the end.
+(C) so I struck out on my own (d,c, b)
+
+(G) went to see an old friend (d,c, b)
+
+(a) asked him if this the end.
+
+(G) the end of the road.
+
+(C) end of the road.
+
+
+(a) tell me of how it goes.
+
+(C) to a place that no one knows.
+
+(G) a place like paradise,
+
+(a) nearby would be nice
+
+(E) end of the road
+
+
+
+
+as if there is no tomorrow
+
+would there be no sorrow
+
+and what would you say today
+
+for time to pass away
+
+(E) End of the road.
+
+
+
+and if i had another chance
+
+what would i say
+
+Is this the end of the road
+
+and of everything we know
+
+or has the journey just begun
+
+for everyone
+
+Are we heading to a reunion
+
+or we heading to our doom
+
+if know one really knows
+
+does it matter where it goes
+
+(E) End of the road
+
+
+
+[P2]
 
 Is this the end of the road.
 
-tell me of where it goes.
-
-where it goes, 
-
-no one knows.
-
-no one knows.
-
-The end of the road.
-
-The end of the road.
-
-
-Is this the end of the road.
-
-Is it the end of all we know.
+the end of all we know.
 
 I reached out to a friend.
 
@@ -76,33 +124,6 @@ And I was runnin scared
 
 as if anyone would care
 
-as if there is no tomorrow
-
-would there be no sorrow
-
-and what would you do today
-
-to pass the time away
-
-and if i had another chance
-
-what would i say
-
-Is this the end of the road
-
-and of everything we know
-
-or has the journey just begun
-
-for everyone
-
-Are we heading to a reunion
-
-or we heading to our doom
-
-if know one really knows
-
-does it matter where we go
 
 is this the end of the road
 
@@ -446,24 +467,314 @@ that were there the whole way through
 
 
 
+So many nights out on the road,
+
+lose count of all the people I know,
+
+so many times go to the show
+
+your surrounded, but all alone.
+
+in your soul.
+
+buried deep down in your soul. yeah, yeah.
 
 
 
 
 
+a friend who is in disguise
+
+tolerate their lies
+
+as they turn back the times
+
+find a higher truth
+
+
+Will we be demoralized,
+
+Will you let them paralyize your mind
+
+or will you fight throudh
 
 
 
 
+[AI_OUTPUT:]
+
+# Variation 1 - Introspective Journey
+
+[Verse 1]
+The highway stretches endless now
+Time slipped away somehow
+Each mile marker fading fast
+As present turns to past
+
+[Verse 2]
+Tall grass waves beneath the sky
+As evening's light drifts by
+Golden rays paint memories
+In fields of dancing wheat
+
+[Chorus]
+Frozen in the winter's bite
+I chose to walk alone at night
+Seeking wisdom from an old friend's door
+Asking if there's something more
+Than just another road
+Just another road
+
+Tell me where the pathway leads
+To mysteries nobody sees
+To that garden in my mind
+Where peace I hope to find
+At the end of this road
+The end of this road
+
+# Variation 2 - Folk Narrative
+
+[Verse 1]
+Lost track of all my days
+On this highway haze
+No compass, no direction home
+Just wheels and roads alone
+
+[Verse 2]
+Found myself in nature's arms
+Far from city's charms
+Watching daylight fade away
+Through amber waves of grain
+
+[Chorus]
+When the cold cut through my bones
+I knew I had to roam
+To see that friend I used to know
+Ask him where this path might go
+Down this winding road
+This winding road
+
+Point me to that sacred space
+That hidden, peaceful place
+Like heaven here on earth
+Just around the curve
+Of this endless road
+This endless road
+
+# Variation 3 - Contemporary Alternative
+
+[Verse 1]
+Navigation's failing
+Memory's derailing
+Clock hands blur together now
+Don't remember when or how
+
+[Verse 2]
+Grass against my skin
+As the day grows dim
+Sunset paints the evening sky
+While golden wheat waves goodbye
+
+[Chorus]
+Shivering in December's hold
+(Had to break away)
+Found myself out in the cold
+(Nothing left to say)
+Knocked upon a familiar door
+Asked if there was something more
+Beyond this road
+Beyond this road
+
+Show me where the mystery flows
+To places no one goes
+Where paradise might wait
+Before it gets too late
+Past this road
+Past this road
 
 
+[AI_OUTPUT|MUSIC|:]
+// Variation 1 - Folk/Acoustic Style
+Time Signature: 4/4
+Key: A minor
+Tempo: ♩ = 72 BPM
+
+Intro:
+||: Am - Em - Am - Em :||
+
+Verse 1 (I1):
+Am                Em
+Lost out on the road
+Am                      Em
+Days all blending long ago
+
+Bridge:
+G                    Dm
+Shifting through the changes
+Am                  C
+Moving with the phases
+
+Chorus (P1):
+Am              Dm
+Strung out from the cold
+C                G
+Strike out on my own
+Am               Em
+Seeking something more
+
+// Variation 2 - Alternative Rock Style
+Time Signature: 6/8
+Key: A minor
+Tempo: ♩. = 60 BPM
+
+Intro:
+||: Am - C - G - Em :||
+
+Verse Pattern:
+||: Am - C - G - Am :||
+
+Bridge:
+G                Dm
+(syncopated rhythm)
+Am               C
+(building intensity)
+
+Outro:
+||: Em - Am - Em - Am :||
+(fade out)
+
+[HUMAN_MODIFIED_VERSIONS:]
+
+[TITLE: BURN BABY BURN - original lyric and music by spazefalcon 2025]
+
+ (a) is this the end of road (G)
+
+ (a) a sunset on all we know (G)
+
+ (a) are we out of time, 
  
+ (C) to find a higher (G) truth
+
+
+[1a]
+
+(3/5\3) and did they 
+
+(a) tranquilize your (C) mind,
+
+when they (a) tried to get you to (G) lie
+
+in a (a) crowded room,
+
+where no (C) one will
+
+ever learn about (G) you (G...)
+
+
+(XXX) its the end of the (a) road 
+
+oh (G) ohhhhh 
+
+(G) its the end of the (a) road 
+
+ah (G) ahhhhh 
+
+(G) its the end of the (a) road 
+
+ew (G) ewwwww end of the (a) road
+
+(3/5\3)
+
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) burn burn burn (3/5\3)
+
+
+(a) Then one day  (c) there was smoke in the south
+(a) so i ran to the refuge of my (g) girlfriends house
+(a) in a soft sweet voice, (c) I heard her there 
+(a) she was trembling ....at the top of the (G) stairs
+(3/5\3)
+(a) what the hell she said, (c) its so good to see you, 
+(a) all the roads are out (G) how did you ever get through
+(a) i said look outside, its like the (C) end of days
+(a) i braved that fire tornado ... just to see your (G) face
+
+
+(G) its the end of the (a) road (ah  (G) ahhhhhh)
+(G) its the end of the (a) road (ewh (G)  ewwwwh)
+(G) its the end of the (a) road (oh  (G) ohhhhhh)
+(G) its the end of the (a) road (ah  (G) ahhhhhh)
+
+(3/7/5)
+
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) burn burn burn (3/5\3)
 
 
 
+(a) lady liberty, (C) takes her last gasp
+(a) a toxic hurricane (G) is rollin past
+(a) we had twenty good years
+(C) to avoid this crisis
+(a) but forced at gun point
+(G) to burn up paradise (G...)
 
 
+(XXX) its the end of the (a) road (/7\) (a/G) 
+(G) its the end of the (a) road (/7\) (a/G) 
+(G) its the end of the (a) road (/7\) (a/G)
+(G) its the end of the (a) road (/7\) (a/G) 
+
+(3/7\5)
+
+a dark red cloud, and it was gaining fast
+with blood on the hands of the old chief justice
+we had held out hope that good would prevail
+but we just couldnt help but burn all the fossil fuel
+
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) BURN BABY BURN BURN (3/7\5)
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) BURN BABY BURN BURN (3/7\5)
 
 
+To mother earth, we send our regards
+since we mechanized, we mustve broke your heart
+
+a river of tears will never clear the air
+with prayers enough to make it all repaired
+
+(3/7\5) and did they
+
+ (a) traquilized your mind (G)
+
+(a) as they tried to get you to lie (G)
+
+(a) in a crowded room,
+
+(C) where no one will
+
+(G) ever hear you cry. 
+
+(G5 3/5\3) was it the 
+
+(a) blind misleading the blind (G)
+
+as they (a) paralize eath others (G) minds 
+
+(a) on a crowded street,
+
+(C) where no one
+
+ will ever hear you (G) scream (G...)
 
 
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) burn baby burn (3/5\3)
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) burn baby burn (3/7\5)
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burn baby burn, baby (G) burn baby burn baby
+(a) burnt
+
+[END: HUMAN GENERATED]

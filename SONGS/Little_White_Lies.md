@@ -173,3 +173,89 @@ for fairy tales dipped in
 
 little white lies
 
+
+A dancer that I know
+
+in a plastic prison
+
+puts powder on her nose
+
+just to hide her scar
+
+she has a voice 
+
+and a heart of gold that
+
+adores you, but you coat it 
+
+a masculine tar.
+
+
+Oh I - I was a lot like you were
+
+once upon a time
+
+behind fairy tale eyes, yeah  
+
+[(in fictional life)(subliminal lies)(trapped in a lie)]
+
+Oh, oh o oh, I was a lot like you were once
+
+
+a punk from houston,
+
+prays for revolution
+
+hed sick and tired 
+
+of the corporate line of shit
+
+he has a voice and a mohawk 
+
+to fight off the
+
+vampire bats
+
+and their parasites.
+
+
+
+
+Its social posion
+
+force fed with a devious smile
+
+choke on bile, it will quiet your mind
+
+Im paranoid,
+
+but not enough to notice you died,
+
+suffocated from their litter inside you.
+
+
+I - I was alot like you were 
+
+once upon a time
+
+a star on a stage to shine on 
+
+but as you go they let you know
+
+theres a knife at your back
+
+at moments notice that the
+
+crowd turns on you
+
+
+
+
+
+
+
+
+
+
+
+

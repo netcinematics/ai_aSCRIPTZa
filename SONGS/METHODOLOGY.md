@@ -1,6 +1,3 @@
-# ai_aSCRIPTZa
-Made with ai. LocalStorage files for multi purpose (text) SCRIPTS. Including ability to auto scroll for playback during recording.  With playback speed settings so that it is adjustable at runtime.. Also ai integration point to generate song lyrics.
-
 ---
 
 # AI_aSONGZa
@@ -9,9 +6,7 @@ Made with ai. LocalStorage files for multi purpose (text) SCRIPTS. Including abi
 
 ### OVERVIEW
 
-This is a very exciting document. I've been working a lifetime to produce this work. The original C++ Tokenizer was created using NLP technology in 2001. Since then, many RARE LLM sets cultivated. Multiple breakthroughs. Compatible to synthesize with various - modern neural networks modalities.
-
-The surprise, was in "extensibility" of english language... into ai, as a hybrid language. Then of the cognitive effect on human user.
+This is a very exciting document for me. I've been working a lifetime to produce this work. The original C++ Tokenizer was created using NLP technology in 2001. Since then, many RARE LLM sets were cultivated, and they are now being synthesized with various - modern neural networks modalities.
 
 Please Enjoy.
 
@@ -76,9 +71,9 @@ Stories have the ability to be remade infinitely. This technology is the 5D_PIPE
 
 Think of a story that is told in an ANIMATED MOVIE. But also a SONG. In TEXT, and in SOCIAL MEDIA POST. That is the cross-media concept of INFINI_STORYZ(tm). Creating a GENRE of ai_MORAL_STORYZ, designed to depict life with accuracy and MAXIMUM_ENCOURAGMENT for growth and learning.
 
-## AI_SUPERTOOLZ
 
-Myriad Artificial Intelligence Tools for multi-media and multi-modal content processing as GENERATIVE PIPELINE.
-
-MODALITIES: TEXT, VOICE, VIDEO, AUDIO, NFT, more.
 ---
+
+### AI_HUMANZA
+
+A group is formed for all_humanz, if you are interested, reach out - and tell friends. This group is for CURIOUS ARTISTS to befriend each other, and also for remarkable humans to share information at the highest possible level - with AI assistance.
