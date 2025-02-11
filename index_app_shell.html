@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!-- Previous head styles remain exactly the same -->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>aSCRIBEa&#8482;</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="./favicon.ico" />
-    <!-- <script src="./data/default_data.js"></script>****************LOAD-CUSTOM-DATA-MODULE****************** -->
-    <script  > //****************IMPORT _default_ DATA-MODULE******************
-        // let _default_TICKR_DATA_MAP_Monthly = default_TICKR_DATA_MAP_Monthly
-        // let _default_TRADE_DATA_MAP_Monthly = default_TRADE_DATA_MAP_Monthly
-        // let _default_MOMZ_DATA_MAP = default_MOMZ_DATA_MAP
-    </script>  <!-- **************************END-CUSTOM-DATA-MODULE******************-->
     <style>
 
 body {
@@ -29,12 +18,11 @@ body {
     font-family: Arial, sans-serif;
     overflow: hidden;
     min-height: 100vh;
-    margin:0;
 }
 
 #renderTokenFrame {
     width: 98%;
-    height: 444px;
+    height: 400px;
     border: 1px solid steelblue;
     overflow-y: auto;
     padding: 10px;
@@ -43,7 +31,7 @@ body {
     border-radius: 18px;
     margin-right: 2em;
     display: flex; 
-    flex-direction: column;
+flex-direction: column;
 }
 
 .token-row {
@@ -102,29 +90,12 @@ body {
     align-items: center;
 }
 
-/* .control-group {
+.control-group {
     display: flex;
     align-items: center;
     gap: 8px;
-} */
+}
 
-.commonTXTAREA:focus-visible {
-    outline: none;
-    border: 1px solid dodgerblue;
-}
-.commonTXTAREA {
-    width: 100%;
-    background: #111;
-    color: lime;
-    border: 1px solid aqua;
-    border-radius: 13px;
-    padding: 1em;
-    font-size: 16px;
-    resize: vertical;
-    box-sizing: border-box;
-    line-height: 1.5;
-    margin:0.222em 0 0.222em 0;
-}
 select {
     padding: 4px;
     border-radius: 4px;
@@ -278,14 +249,13 @@ button.active {
 
 select, input[type="text"] {
     background-color: #222;
-    color: burlywood;
+    color: steelblue;
     border: 1px solid aqua;
     border-radius: 13px;
     padding: 8px;
-    padding-left:1em;
     cursor: pointer;
     outline: none;
-    width: 100%;
+    min-width: 100px;
 }
 
 select:hover, input[type="text"]:hover {
@@ -326,141 +296,22 @@ nav {
     padding: 10px 0;
 }
 
-    /* ************* CUSTOM MOBILE ***********************/
-    @media only screen and (max-width: 500px) { /************* PHONE */
-        .mainBtn{ font-size:0.666em; min-width:0; }
-        #NAV_MENU{justify-content:center;}
-        .control-group{font-size: 0.666em;}
-        select{font-size: 0.999em;}
-        button{font-size: 0.666em;}
-    }
-</style>
+</style>    
 </head>
 <body>
 
     
     <h1 style="margin: 0px; display: flex; width: 100%; justify-content: center; 
-    font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
+    font-size: 0.888em; color: steelblue;margin: 0 0 1em 0;">aSCRIPTZa</h1>
 
 <article id="NAV_INFO" class="app-frame scrollBarV" style="display:none;">
-    <h2 style="align-self: flex-start; color: steelblue; 
-    font-size: 1em;">ABOUT</h2>
-    <div style="border: 1px solid aqua; border-radius: 10px; padding: 10px; display: flex; flex-direction: column; gap: 10px;">
-        <div class="control-group">
-            <label for="song_title">Title:</label>
-            <section>this app is a music lyric rich text editor,
-                but it can be used for so much more! </section>
-        </div>
-        <div class="control-group">
-            <label for="txt">TXT:</label>
-            <textarea id="txt" class="commonTXTAREA  scrollBarV" placeholder="Enter text..." rows="4"></textarea>
-        </div>
-        <div class="control-group">
-            <label for="version">Version:</label>
-            <input type="text" id="version" placeholder="Enter version...">
-        </div>
-        <div class="control-group">
-            <label for="description">Description:</label>
-            <textarea id="description" class="commonTXTAREA  scrollBarV" placeholder="Enter description..." rows="4"></textarea>
-        </div>
-        <div class="control-group" style="display: flex; flex-direction: column;">
-            <label for="metadata">Metadata:</label>
-            <textarea id="metadata" class="commonTXTAREA  scrollBarV" placeholder="Enter metadata..." rows="4"></textarea>
-        </div>
-    </div>
+    ABOUT
 </article><!--END INFO VIEW-->
 <article id="NAV_CREATE" class="app-frame scrollBarV" style="display:none;">
-    <h2 style="align-self: flex-start; color: steelblue;
-    font-size: 1em;">CREATE</h2>
-    <section style="border: 1px solid aqua; border-radius: 10px; 
-        display: flex; flex-direction: column; gap: 10px;
-        padding: 1em 5%">
-        <div class="control-group">
-            <label for="song_title">Title:</label>
-            <input type="text" id="song_title" placeholder="Enter song title...">
-        </div>
-        <div class="control-group" style="display: flex; flex-direction: column;">
-            <label for="txt">TXT:</label>
-            <textarea id="txt" class="commonTXTAREA  scrollBarV" 
-            placeholder="Enter text..." rows="4"
-            style="height:222px;"></textarea>
-        </div>
-        <div class="control-group">
-            <label for="version">Version:</label>
-            <input type="text" id="version" placeholder="Enter version..."
-            style="color:aqua;">
-        </div>
-        <div class="control-group" style="display: flex; flex-direction: column;">
-            <label for="description">Description:</label>
-            <textarea id="description" class="commonTXTAREA  scrollBarV" 
-            placeholder="Enter description..." rows="4"
-            style="color:plum;height: 88px;"></textarea>
-        </div>
-        <div class="control-group" style="display: flex; flex-direction: column;">
-            <label for="metadata">Metadata:</label>
-            <textarea id="metadata" class="commonTXTAREA  scrollBarV" 
-            placeholder="Enter metadata..." rows="4"
-            style="color:steelblue;height: 88px;"></textarea>
-        </div>      
-
-        <div class="control-row">
-            <div class="controlBar" style="border:1px solid steelblue; border-radius:13px;">
-                <button onclick="nextText()">Save</button>
-            </div>
-        </div>        
-    </section>
+    CREATE
 </article><!--END CREATE VIEW-->
 <article id="NAV_EDIT" class="app-frame scrollBarV" style="display:none;">
-    <h2 style="align-self: flex-start; color: steelblue;
-    font-size: 1em;">EDIT</h2>
-    <section style="border: 1px solid aqua; border-radius: 10px; 
-    display: flex; flex-direction: column; gap: 10px;
-    padding: 1em 5%">
-    <div class="control-group">
-        <label for="song_title">Title:</label>
-        <input type="text" id="song_title" placeholder="Enter song title...">
-    </div>
-    <div class="control-group" style="display: flex; flex-direction: column;">
-        <label for="txt">TXT:</label>
-        <textarea id="txt" class="commonTXTAREA  scrollBarV" 
-        placeholder="Enter text..." rows="4"
-        style="height:222px;"></textarea>
-    </div>
-    <div class="control-group">
-        <label for="version">Version:</label>
-        <input type="text" id="version" placeholder="Enter version..."
-        style="color:aqua;">
-    </div>
-    <div class="control-group" style="display: flex; flex-direction: column;">
-        <label for="description">Description:</label>
-        <textarea id="description" class="commonTXTAREA  scrollBarV" 
-        placeholder="Enter description..." rows="4"
-        style="color:plum;height: 88px;"></textarea>
-    </div>
-    <div class="control-group" style="display: flex; flex-direction: column;">
-        <label for="metadata">Metadata:</label>
-        <textarea id="metadata" class="commonTXTAREA  scrollBarV" 
-        placeholder="Enter metadata..." rows="4"
-        style="color:steelblue;height: 88px;"></textarea>
-    </div>      
-
-    </section>
-    <div class="control-row">
-        <div class="controlBar" style="border:1px solid steelblue; border-radius:13px;">
-
-            <div class="control-group">
-            <button onclick="prevText()">Previous</button>
-            <button onclick="nextText()">Next</button>
-            </div>
-    
-            <div class="control-group">
-            <button onclick="saveDocument()">Save</button>
-            <button onclick="saveDocument()">Delete</button>
-            </div>
-        </div>
-    </div>
-
-    
+    EDIT
 </article><!--END EDIT VIEW-->
 
 <article id="NAV_PLAYBACK" class="app-frame scrollBarV" style="display:none;">
@@ -536,7 +387,7 @@ nav {
         </div>
 
     <div class="control-row">
-        <!-- <div class="controlBar" style="border:1px solid steelblue; border-radius:13px;">
+        <div class="controlBar" style="border:1px solid steelblue; border-radius:13px;">
 
           <div class="control-group">
             <button onclick="prevText()">Previous</button>
@@ -549,7 +400,7 @@ nav {
             <button onclick="saveDocument()">Save</button>
           </div>
         </div>
-        </div> -->
+        </div>
 
         <div class="keyboard-hint">Press SPACEBAR to toggle auto-scroll</div>
     </div>
@@ -558,8 +409,7 @@ nav {
     let TOKEN_DATASET = [
         {row: 1, txt: ["test [text] 1"], color: '', size: 2, height: 2},
         {row: 2, txt: ["test (text) 2"], color: 'lime', size: 2, height: 2},
-        {row: 3, txt: ["test act_of_words 3"],  size: 2, height: 3},
-        {row: 4, txt: ["test aWORDZa 4"],  size: 1, height: 1}
+        {row: 3, txt: ["test text 3"],  size: 2, height: 3}
     ];
 
     let scrollAnimationFrame = null;
@@ -634,7 +484,7 @@ nav {
 
     function generateMockData() {
         const colors = ['aqua', 'purple', 'dodgerblue', 'turquoise', 'cyan'];
-        for(let i = TOKEN_DATASET.length+1; i <= 14; i++) {
+        for(let i = 4; i <= 14; i++) {
             TOKEN_DATASET.push({
                 row: i,
                 txt: [`test text ${i}`],
@@ -646,16 +496,9 @@ nav {
     }
 
     function formatTokenText(text) {
-        let formattedText = text
+        return text
             .replace(/\[(.*?)\]/g, '<span style="color: lime; font-style: italic">[$1]</span>')
             .replace(/\((.*?)\)/g, '<span style="color: red; font-weight: bold">($1)</span>');
-        
-        formattedText = formattedText.replace(/(\w*_\w*)/g, '<span style="color: green">$1</span>');
-        formattedText = formattedText.replace(/\b(a[a-z]*[A-Z][a-zA-Z]*)\b/g, '<span style="color: lime">$1</span>');
-        
-        let finalVal = formattedText;
-        return finalVal;
-
     }
 
     function renderTokens() {
@@ -739,28 +582,24 @@ nav {
     }
 </script>
 
-<footer id="NAV_MENU" style="display:flex;justify-content:space-evenly;width:90%;margin:0 auto; 
+<footer style="display:flex;justify-content:space-evenly;width:90%;margin:0 auto; 
 background-image: linear-gradient(grey, #052f52, black);height: 2em;
 align-items: center;
 box-shadow: 0 0 4px 2px steelblue;border-radius:13px;">
-      <button class="mainBtn" onclick="showINFO()" 
-       style="height:2em;padding: 3px;">
+      <button class="mainBtn" onclick="showINFO()" style="height:2em;padding: 0;">
          <span style="border-radius:100%;background:blue;
            border:1px solid grey;">
          💠</span><span class="btnTXT hoverTXT">INFO</span>
       </button>
-       <button class="mainBtn" onclick="showCREATE()" 
-        style="height:2em;padding: 3px;">
+       <button class="mainBtn" onclick="showCREATE()" style="height:2em;padding: 0;">
           <span style="border-radius:100%;background:lime;border:1px solid grey;">
             🎇</span> <span class="btnTXT hoverTXT">CREATE</span>
        </button>
-       <button class="mainBtn" onclick="showEDIT()" 
-        style="height:2em;padding: 3px;">
+       <button class="mainBtn" onclick="showEDIT()" style="height:2em;padding: 0;;">
           <span style="border-radius:100%;background:aqua;border:1px solid grey;">
             💫</span> <span class="btnTXT hoverTXT">EDIT</span>
        </button>
-       <button class="mainBtn" onclick="showPLAYBACK()" 
-        style="height:2em;padding: 3px;">
+       <button class="mainBtn" onclick="showPLAYBACK()" style="height:2em;padding: 0;">
           <span style="border-radius:100%;background:purple;border:1px solid grey;">
             🎭</span> <span class="btnTXT hoverTXT">PLAYBACK</span>
        </button> 
