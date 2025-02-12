@@ -155,20 +155,6 @@ select {
     background: #f44336;
 }
 
-/**********************Inline Edit Style**********************/
-.edit-input{
-    color:aqua !important;
-    margin-bottom:0.222em !important;
-    font-size: 14px !important;
-    width: 100% !important;
-    line-height: 1em !important;
-}
-
-.save-btn .cancel-btn{
-    font-size:16px !important;
-}
-/**********************END Inline Edit Style**********************/
-
 /* CUSTOM CHECKBOX *************************************************/
 .checkboxFrame {
     display:flex;position:relative;padding: 0em 0em 0.666em 0em;margin: 0em 1em 0em 1em;
@@ -433,20 +419,12 @@ nav {
                 <button onclick="newTXT()">New</button>
                 <button onclick="saveTXT_EDIT()">Save</button>
                 <button onclick="deleteTXT()">Delete</button>
-                <button onclick="saveTXT_EDIT(); showPLAYBACK();">Render</button>
+                <button onclick="showPLAYBACK()">Render</button>
             </div>
             <script>
                 let TXT_IDX = 0; //index of current document
                 let TXT_DOC_DATA = [
-                    {title: 'txt1', txt: `text 1
-                    
-                    [something]
-                    
-                    (secondary)
-                    
-                    aTHIRDZa
-                    
-                    UNDER_BAR_SYNTAX`,version:'v', 
+                    {title: 'txt1', txt: 'text 1',version:'v', 
                         description:'description 1', metadata:'metadata 1'},
                     {title: 'txt2', txt: 'text 2',version:'v', 
                         description:'description 2', metadata:'metadata 2'},
@@ -698,7 +676,6 @@ nav {
     }
 
     function formatTokenText(text) {
-        // debugger;
         let formattedText = text
             .replace(/\[(.*?)\]/g, '<span style="color: lime; font-style: italic">[$1]</span>')
             .replace(/\((.*?)\)/g, '<span style="color: red; font-weight: bold">($1)</span>');
@@ -706,7 +683,7 @@ nav {
         formattedText = formattedText.replace(/(\w*_\w*)/g, '<span style="color: green">$1</span>');
         formattedText = formattedText.replace(/\b(a[a-z]*[A-Z][a-zA-Z]*)\b/g, '<span style="color: lime">$1</span>');
         
-        let finalVal = formattedText.trim();
+        let finalVal = formattedText;
         return finalVal;
 
     }
@@ -735,12 +712,10 @@ nav {
                     <input type="checkbox" class="spot_checkmark" data-row="${token.row}">
                     <span class="checkmark"></span>
                 </label>
-                <div class="token-text" 
-                     data-row="${token.row}" 
-                     onclick="makeEditable(this, event)"
-                     style="color: ${token.color};
-                            font-size: ${token.size}em;
-                            line-height: ${token.height};">
+                <div class="token-text" style="
+                    color: ${token.color};
+                    font-size: ${token.size}em;
+                    line-height: ${token.height};">
                     ${formattedText}
                 </div>`;
 
@@ -764,51 +739,6 @@ nav {
                     cb.checked = isSelectAllChecked;
                 });
             }
-        }
-    }
-
-    function makeEditable(element, event) {
-        if (event) {
-            event.stopPropagation();
-        }
-        
-        // Don't make editable if clicking inside input
-        if (event && event.target.classList.contains('edit-input')) {
-            return;
-        }
-    
-        const row = element.dataset.row;
-        const originalText = element.innerText;
-        element.innerHTML = `
-            <input type="text" 
-                value="${originalText}" 
-                class="edit-input" 
-                onclick="event.stopPropagation()"
-                style="width: 80%;
-                       color: inherit;
-                       font-size: inherit;
-                       line-height: inherit;">
-            <button onclick="saveEdit(${row})" class="save-btn" style="font-size:12px;line-height:8px;">Save</button>
-            <button onclick="cancelEdit(${row}, '${originalText}')" class="cancel-btn" style="font-size:12px;line-height:8px;">Cancel</button>
-        `;
-        element.querySelector('.edit-input').focus();
-    }
-
-    function cancelEdit(row, originalText) {
-        const element = document.querySelector(`[data-row="${row}"]`);
-        if (element) {
-            const token = TOKEN_DATASET.find(t => t.row === parseInt(row));
-            token.txt = [originalText];
-            renderTokens();
-        }
-    }
-
-    function saveEdit(row) {
-        const input = document.querySelector(`[data-row="${row}"] .edit-input`);
-        const token = TOKEN_DATASET.find(t => t.row === parseInt(row));
-        if (token && input) {
-            token.txt = [input.value];
-            renderTokens();
         }
     }
 

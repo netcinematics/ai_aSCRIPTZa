@@ -645,7 +645,9 @@ Outro:
 
 [HUMAN_MODIFIED_VERSIONS:]
 
-[TITLE: BURN BABY BURN - original lyric and music by spazefalcon 2025]
+[TITLE: END OF THE ROAD]
+[- sub title BURN BABY BURN ]
+[- original lyric and music by spazefalcon 2025 zero ai assist]
 
  (a) is this the end of road (G)
 
@@ -668,18 +670,18 @@ in a (a) crowded room,
 
 where no (C) one will
 
-ever learn about (G) you (G...)
+ever notice (G) you (G...)
 
 
-(XXX) its the end of the (a) road 
+(XXX) is it the end of the (a) road 
 
 oh (G) ohhhhh 
 
-(G) its the end of the (a) road 
+(G) is it the end of the (a) road 
 
 ah (G) ahhhhh 
 
-(G) its the end of the (a) road 
+(G) is it the end of the (a) road 
 
 ew (G) ewwwww end of the (a) road
 
@@ -689,21 +691,21 @@ ew (G) ewwwww end of the (a) road
 (a) burn baby burn, baby (G) burn burn burn (3/5\3)
 
 
-(a) Then one day  (c) there was smoke in the south
-(a) so i ran to the refuge of my (g) girlfriends house
+(a) Then one day  (c) there was smoke in the air
+(a) so i ran to the refuge of my (g) house
 (a) in a soft sweet voice, (c) I heard her there 
 (a) she was trembling ....at the top of the (G) stairs
 (3/5\3)
-(a) what the hell she said, (c) its so good to see you, 
+(a) what in hell she said, (c) its so good to see you, 
 (a) all the roads are out (G) how did you ever get through
 (a) i said look outside, its like the (C) end of days
-(a) i braved that fire tornado ... just to see your (G) face
+(a) i braved a fire tornado ... just to see her (G) face
 
 
-(G) its the end of the (a) road (ah  (G) ahhhhhh)
-(G) its the end of the (a) road (ewh (G)  ewwwwh)
-(G) its the end of the (a) road (oh  (G) ohhhhhh)
-(G) its the end of the (a) road (ah  (G) ahhhhhh)
+(G) at the end of the (a) road (ah  (G) ahhhhhh)
+(G) at the end of the (a) road (ewh (G)  ewwwwh)
+(G) at the end of the (a) road (oh  (G) ohhhhhh)
+(G) at the end of the (a) road (ah  (G) ahhhhhh)
 
 (3/7/5)
 
@@ -712,12 +714,12 @@ ew (G) ewwwww end of the (a) road
 
 
 
-(a) lady liberty, (C) takes her last gasp
+(a) lady liberty, (C) takes a last gasp
 (a) a toxic hurricane (G) is rollin past
 (a) we had twenty good years
 (C) to avoid this crisis
 (a) but forced at gun point
-(G) to burn up paradise (G...)
+(G) we burn paradise (G...)
 
 
 (XXX) its the end of the (a) road (/7\) (a/G) 
@@ -733,20 +735,19 @@ we had held out hope that good would prevail
 but we just couldnt help but burn all the fossil fuel
 
 (a) burn baby burn, baby (G) burn baby burn baby
-(a) burn baby burn, baby (G) BURN BABY BURN BURN (3/7\5)
+(a) burn baby burn, baby (G) BURN BURN BURN BURN (3/7\5)
 (a) burn baby burn, baby (G) burn baby burn baby
-(a) burn baby burn, baby (G) BURN BABY BURN BURN (3/7\5)
+(a) burn baby burn, baby (G) BURN BURN BURN BURN (3/7\5)
 
 
 To mother earth, we send our regards
 since we mechanized, we mustve broke your heart
-
 a river of tears will never clear the air
-with prayers enough to make it all repaired
+or a single prayer to make it repair
 
 (3/7\5) and did they
 
- (a) traquilized your mind (G)
+ (a) tranquilized your mind (G)
 
 (a) as they tried to get you to lie (G)
 
@@ -756,25 +757,26 @@ with prayers enough to make it all repaired
 
 (G) ever hear you cry. 
 
-(G5 3/5\3) was it the 
+(G5 3/5\3) and did they
 
-(a) blind misleading the blind (G)
+(a) paralyize your mind (G)
 
-as they (a) paralize eath others (G) minds 
+plain sight (a) robbing everyone  (G) blind 
 
-(a) on a crowded street,
+(a) in broad day light,
 
 (C) where no one
 
  will ever hear you (G) scream (G...)
 
+stop burning.
 
 (a) burn baby burn, baby (G) burn baby burn baby
 (a) burn baby burn, baby (G) burn baby burn (3/5\3)
-(a) burn baby burn, baby (G) burn baby burn baby
+(G) stop burning
 (a) burn baby burn, baby (G) burn baby burn (3/7\5)
 (a) burn baby burn, baby (G) burn baby burn baby
 (a) burn baby burn, baby (G) burn baby burn baby
-(a) burnt
+(a) stop burning earth
 
 [END: HUMAN GENERATED]
