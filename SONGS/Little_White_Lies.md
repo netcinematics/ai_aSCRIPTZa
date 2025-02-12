@@ -1,35 +1,128 @@
 /*********************************
 
-# Little White Lies
+# Pineapple Paradise / Fantasy Life
 
- - by spazefalcon 2000 MIT
+ - by spazefalcon 2000 (c)
+
+ - all original words and music by human
+
+ - ai variations, encouraged MIT
+
+ - ai variations commercial use license,
+
+ - attribute "original music by spazefalcon"
 
 ********************************//
+
+
+
+
+a girl asked me...
+
+for a cup of sugar (clap,clap)
+
+to bake a cake for a holiday
+
+but it laced with all of societies vices
+
+powder sugar spiked with little surprises..
+
+it has love inside, she said (slide,slide)
+
 
 
 I - I was alot like you were 
 
 once upon a time
 
-buried in lies
+in a pineapple paradise
 
-- 
+I - I remember it fondly at times
+
+a wish transists into a fantasy life
+
+transist a wish into a fantasy
+transist a wish into her fantasy   
+transist a wish into a fantasy... (d)
+
+ life....(a)
+
+(slides 4)
+
+
+in castle, on a hill
+
+she plans to dance forever (clap,clap)
+
+but all the men
+
+were always drunk and rude (clap)
+
+she kicks them out
+
+for animals she finds in the forest
+
+Rabbits, dogs, a cat, and even a deer.
+
+
+I - I was alot like you were 
+
+once upon a time
+
+in a pineapple paradise
+
+I - I remember it fondly at times
+
+
+transist a wish into a fantasy ... <woah-oh>
+transist a wish into her fantasy ...  <yeah-ah>
+transist a wish into a fantasy... (d)
+
+ life....(a)
+
+(slides 4)
+
+
 
 Like a cushion on a stone
 
-with a touch of sugar
+with a touch of sugar (clap,clap)
 
-the illusion alone
+a princess all alone
 
-will only get us so far, oh
+without a key to her heart, yeah
 
-my best advice is 
+in ivory tower
 
-to check reality twice
+she can see all the way
 
-for fairy tales dipped in
+from the mountains to the sea
 
-little white lies
+but she can never get there
+
+Because the truth is...
+
+the truth is that she works
+
+in a downtown job that she hates
+
+eight days a week, she saves
+
+no energy left for herself
+
+that is how she finds
+
+an escape that exits in her mind eye
+
+turn a wish into a fantasy life <yeah-ah>
+
+she turns a wish into a fantasy ... <woah-oh>
+she turns a wish into a fantasy ...  <yeah-ah>
+she turns a wish into a fantasy... (d)
+
+ (a) life....
+
+(slides 4)
 
 
 
@@ -37,116 +130,77 @@ I - I was alot like you were
 
 once upon a time, 
 
-on an adrenaline line
+in a pineapple paradise
 
+and I - I remember it fondly sometimes
 
-a girl asks me
+transcend a wish into fantasy life
 
-for a cup of sugar
+I turn a wish into a fantasy life <woah-oh>
+I turn a wish into a fantasy life  <yeah-ah>
+I turn a wish into a fantasy... (d)
 
-to cook a cake
+ (a) life....
 
-of something pure and good
+(slides 4)
 
-but it laced with societies
+Theres a candy palace
 
-sacharine vices
+where the young queen hides away
 
-a powder keg, set
+candy-coated
 
-to muddy our minds.
+to keep societies toxins at bay
 
+they flow like goo, until
 
+they ooze inside of her 
 
-a crystal palace
+tranquil paradise,
 
-to run and hide, oh
+like tar in a garden... (a)
 
-daddys money is enough
+(XX) distroyed.
 
-to buy her a life,
-
-but it cant help us
-
-with the pain inside, no.
-
-I - I was alot like you were 
-
-once upon a time,
-
-buried by lies
-
-
-
-it might be nice
-
-for a senator
-
-to buy you a life
-
-but it does nothin 
-
-for the sulfur inside
-
-
-
-a tank of gas
-
-can only get us so far
-
-
-
-Like a cushion on a stone
-
-with a touch of sugar
-
-the illusion alone
-
-will only get us so far
-
-it must be nice to say
-
-that daddy will buy you a life
-
-but it was nothin but 
-
-a little white lie
-
-[wind in beginning, ocean waves at the end]
-
-
-
-a river bed
-
-with no more water
-
-to quench your thirst
-
-down the highway of life, yeah
-
-a desert land
-
-with vulteres who sell paradise
-
-never tell you about the
-
-treacherous nights
 
 I - I was alot like you were
 
-once upon a time,
+once upon a time, 
 
-trapped in hologram mind,
+in a pineapple garden distroyed,
 
-it must be nice, to think
+I - i rememeber it fondly sometimes
 
-a vulture to buy you a life,
+turn the water and the whiskey to wine (slide1)
+turn the water and the whiskey to wine (slide 2)
+turn the water into  fantasy... (d)
 
-but its a desert that is buried in time
+(a) life...
+
+(X) Distroyed
+
+I - I was alot like you were
+
+once upon a time, 
+
+in a pineapple garden distroyed,
+
+oh- oh oh 
+
+i rememeber it fondly sometimes
+
+turn a wish into a fantasy life <woah-oh>
+turn a wish into a fantasy life  <yeah-ah>
+return a wish into a fantasy... (d)
+
+ (a)life....
+
+(slides 4) (E) 
+
+[THE_END]
 
 
-sold a powerful lie, yeah,
-
+[EXTRA VARIATIONS:]
 
 a princess on her throne
 
@@ -156,22 +210,6 @@ cooks a candy palace
 
 so shes safe inside, yeah
 
-just recite a spell
-
-manifest a fabulous life
-
-forever after, trapped
-
-by little white lies.
-
-
-my best advice is 
-
-to check reality twice
-
-for fairy tales dipped in
-
-little white lies
 
 
 A dancer that I know
@@ -220,33 +258,6 @@ and their parasites.
 
 
 
-
-Its social posion
-
-force fed with a devious smile
-
-choke on bile, it will quiet your mind
-
-Im paranoid,
-
-but not enough to notice you died,
-
-suffocated from their litter inside you.
-
-
-I - I was alot like you were 
-
-once upon a time
-
-a star on a stage to shine on 
-
-but as you go they let you know
-
-theres a knife at your back
-
-at moments notice that the
-
-crowd turns on you
 
 
 
