@@ -4,6 +4,8 @@
 
 ----
 
+
+
 ### OVERVIEW
 
 This is a very exciting document for me. I've been working a lifetime to produce this work. The original C++ Tokenizer was created using NLP technology in 2001. Since then, many RARE LLM sets were cultivated, and they are now being synthesized with various - modern neural networks modalities.
@@ -12,7 +14,20 @@ Please Enjoy.
 
 EnVolveren ~ : )
 
+ROXZILLA & spazefalcon.
+
 ----
+
+PRINCIPLES:
+
+1. simple musical progressions
+
+2. with ai generated lyrics over top
+
+3. as INFINI_SONGZ, from INFINI_TXTZ
+
+4. Licensed for commercial re-use by attribution (ROXZILLA/spazefalcon)
+
 
 ## PURPOSE
 
