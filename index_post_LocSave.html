@@ -546,7 +546,6 @@ nav {
                     });
                     TXT_IDX = ai_aSCRIBEa_DATA["TXTZ"].length - 1;
                 }
-                SAVE_DOCZ(); //save to local storage
             }
         }
 
@@ -558,7 +557,6 @@ nav {
                 newTXT();
                 TXT_IDX = 0;
             }
-            SAVE_DOCZ();
         }
 
         function init_EDIT_VIEW() {
@@ -754,14 +752,13 @@ nav {
     }
 
     function formatTokenText(text) {
-        let formattedText = text;
-        formattedText = formattedText.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-        formattedText = formattedText.replace(/&lt;(.*?)&gt;/g, '<span style="color: cyan">&lt;$1&gt;</span>');
-        formattedText = formattedText.replace(/\[(.*?)\]/g, '<span style="color: lime; font-style: italic">[$1]</span>')
+        let formattedText = text
+            .replace(/\[(.*?)\]/g, '<span style="color: lime; font-style: italic">[$1]</span>')
             .replace(/\((.*?)\)/g, '<span style="color: red; font-weight: bold">($1)</span>');
-        formattedText = formattedText.replace(/^#(.*)$/gm, '<strong>$1</strong>');
+        // formattedText = formattedText.replace(/^#(.*)$/gm, '<strong>$1</strong>');
         formattedText = formattedText.replace(/(\w*_\w*)/g, '<span style="color: green">$1</span>');
         formattedText = formattedText.replace(/\b(a[a-z]*[A-Z][a-zA-Z]*)\b/g, '<span style="color: lime">$1</span>');
+        
         let finalVal = formattedText.trim();
         return finalVal;
 
@@ -783,7 +780,8 @@ nav {
             rowElement.className = 'token-row';
 
             // Format token text with regex matches
-            const formattedText = token.txt.map(text => formatTokenText(text)).join(' ');
+            const formattedText = token.txt.map(text => 
+                formatTokenText(text)).join(' ');
 
             rowElement.innerHTML = `
                 <span style="margin-top: 0.444em;font-size:0.666em;">${token.row}</span>
@@ -869,32 +867,20 @@ nav {
     }
 
     function updateSelectedRows(id) {
-        const selectedValue = document.getElementById(id).value;
-        const checkboxes = document.querySelectorAll('.spot_checkmark:checked');
-        
+        const fontSize = document.getElementById('fontSizeCOMBO').value;
+        const lineHeight = document.getElementById('lineHeightCOMBO').value;
+        const color = document.getElementById('colorCOMBO').value;
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
         checkboxes.forEach(checkbox => {
-            const rowIndex = parseInt(checkbox.dataset.row) - 1;
-            const token = TOKEN_DATASET[rowIndex];
-            
-            switch(id) {
-                case 'colorCOMBO':
-                    token.color = selectedValue;
-                    break;
-                case 'fontSizeCOMBO':
-                    token.size = parseInt(selectedValue);
-                    break;
-                case 'lineHeightCOMBO':
-                    token.height = parseInt(selectedValue);
-                    break;
+            const row = parseInt(checkbox.dataset.row);
+            const token = TOKEN_DATASET.find(t => t.row === row);
+            if (token) {
+                if(id==='fontSizeCOMBO') {token.size = parseInt(fontSize);}
+                if(id==='lineHeightCOMBO') {token.height = parseInt(lineHeight);}
+                if(id==='colorCOMBO') {token.color = color;}
             }
-            
-            saveTokenProperties(TXT_IDX, rowIndex, {
-                color: token.color,
-                size: token.size,
-                height: token.height
-            });
         });
-        
+
         renderTokens();
     }
 
@@ -928,16 +914,14 @@ nav {
         const doc = ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX];
         document.getElementById('txtTitle').value = doc.title;
         let TOKEN_TXT = doc.txt.split('\n');
-
         TOKEN_TXT = TOKEN_TXT.filter(token => token.trim() !== '');
-        TOKEN_DATASET = TOKEN_TXT.map((line, index) => {
-            const props = getTokenProperties(TXT_IDX, index);
-            return {
-                row: index + 1,
-                txt: [line],
-                ...props
-            };
-        });
+        TOKEN_DATASET = TOKEN_TXT.map((line, index) => ({
+            row: index + 1,
+            txt: [line],
+            color: '',
+            size: 2,
+            height: 2            
+        }));
         renderTokens();
     }
 
@@ -963,27 +947,6 @@ nav {
             btn.innerHTML = '<span>▲</span>';
         }
     } toggleFrameSize();
-
-    // Initialize metadata structure if not exists
-    if (!ai_aSCRIBEa_DATA["METADATA"]) {
-        ai_aSCRIBEa_DATA["METADATA"] = {};
-    }
-
-    function saveTokenProperties(txtIndex, rowIndex, properties) {
-        if (!ai_aSCRIBEa_DATA["METADATA"][txtIndex]) {
-            ai_aSCRIBEa_DATA["METADATA"][txtIndex] = {};
-        }
-        ai_aSCRIBEa_DATA["METADATA"][txtIndex][rowIndex] = properties;
-        SAVE_DOCZ();
-    }
-
-    function getTokenProperties(txtIndex, rowIndex) {
-        return ai_aSCRIBEa_DATA["METADATA"]?.[txtIndex]?.[rowIndex] || {
-            color: '',
-            size: 2,
-            height: 2
-        };
-    }
 </script>
 
 <footer id="NAV_MENU" style="display:flex;justify-content:space-evenly;width:90%;margin:0 auto; 

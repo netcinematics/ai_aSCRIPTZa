@@ -16,16 +16,16 @@
 
 
 
-[INTRO](arp:em,G,D...2:3\2...)
-(em) girl (G) ask me,
+[INTRO](arp:em,G,D...2:3\2\0...)
+(em) a girl (G) ask me,
 
 for a (D) cup of (A) sugar <clap,clap>
 
-(em) bake a (G) cake for a (D)holi(A)day <yeah-ah>
+(em) to bake a (G) cake or (D) something (A) sweet <yeah-ah>
 
-but it laced with all of societies vices
+(em) she dont (G) know it, but its (D) spiked with societ(A)ies 
 
-powder sugar, spiked with a little surprise
+(em) vices, powder sugar, laced with little sur-pri-ses
 
 it has love inside, she said 
 
@@ -37,45 +37,45 @@ it has love inside, she said
 
 (em) once upon a (G) time
 
-(D) livin a (A) fabulous (em) life 
+(D) livin a (A) fan-ta-sy (em) life 
 
 (em) I ... I (G)|[em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
- reme(D)mber it (A) fondly at (em) times
+ reme(D)mber it (A) fondly some (em) ti-mes
 
-(em) twist a (G) wish into a (D) fantasy (A) life <yeah-ah>
+(em) twist your (G) luck into a (D) fantasy (A) ... <yeah-ah>
 
-(em) twist your (G) wish into a fantasy... (D)
+(em) twist your (G) luck into a fantasy (D) ... [hold_2X]
 
 (A) life... <li - i - i - i - ife>
 
-[A:2:3-2,3-2,1:3,3...]
+[A:1:3-0,3-0,1:3,3/]
 
 
 (em) castle, on a (G) hill
 
-she gonna (D)dance for(A)ev(A7)er <clap,clap>
+she will (D)dance for(A)ev(A7)er <clap,clap>
 
-(em) but all the other (G) girls
+(em) while all the other (G) girls turn
 
-so (D) cruel and (A) cold <whoa-oh>  <clap,clap>
+(D) cold as (A) stone <whoa-oh>  <clap,clap>
 
-(em) she leaves them all (G) behind 
+(em) she leaves them (G) all behind 
 
 for (D) >animals< she (A) finds in the (em) fo-rest, 
 
 With her (G) dog, a cat, a (D) bird and a (A) deer.<yeah-ah>
 
-[A:1:3-0,3-0,3,3...]
+[A:1:3-0,3-0,3,3/]
 
 [CHORUS2]
 (em) I ... (G) I,  was a (D) lot like (A) you (A7) were 
 
 (em) once upon a (G) time
 
-(D) livin a fabulous life (em) 
+(D) livin a (A) fan-ta-sy (em) life 
 
 (em) I ... I (G)|[em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
- reme(D)mber it (A) fondly at (em) times
+ reme(D)mber it (A) fondly some (em) ti-mes
 
 (em) twist a (G) wish into a (D) fantasy (A) life <yeah-ah>
 
@@ -83,13 +83,13 @@ With her (G) dog, a cat, a (D) bird and a (A) deer.<yeah-ah>
 
 (A) life... <li - i - i - i - ife>
 
-[A:2:3-2,3-2,1:3-0,3-3] (XX) Like a
+[A:1:3-0,3-0,3-3...] 
 
-(em) cushion on a (G) stone
+(em) princess on her (G) phone
 
-with a (D) touch of (A) sugar <clap,clap>
+with a (D) room full a (A) pillows <clap,clap>
 
-(e) a princess all a(G)lone
+(e) so all a(G)lone
 
 without a (D) key to her (A) heart <yeah-ah>
 
@@ -99,7 +99,7 @@ she can (D) see all the (A) way from the
 
 (em) valley to the (G) sea
 
-but she will (D) never ever (A) get there
+but she will (D) never ever (A) be there
 
 
 (XX) shes gotta work <clap,clap>
