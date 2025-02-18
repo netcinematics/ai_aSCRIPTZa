@@ -371,6 +371,20 @@ nav {
 </style>
 </head>
 <body>
+    <section id="MSGBOX" class="mainBtn" style="border-radius:20px;
+        background:#091d3e;padding:4px 4px 8px 4px;display:none;
+        border: 1px solid rgb(221, 118, 2);color:rgb(221, 118, 2);
+        position: absolute;top: 0.666em;z-index: 10;
+        ">⚠️ error...</section>
+<script>//----CUSTOM-UTILITIE-----------------
+    //----------------------------USR MSG -------------
+    let showUSRMSG = (msg) => {
+        let MSGBOX = document.getElementById('MSGBOX');
+        MSGBOX.innerHTML = msg;
+        MSGBOX.style.display = "inline";
+        setTimeout( ()=>{ MSGBOX.style.display = "none"; },2000);
+    }//----------------------------end USR MSG -------------    
+</script>
 <script>/************LOCAL_STORAGE****************/
     /************************************************\
      * - ai_aSCRIBEa_DATA_MATRIX
@@ -395,6 +409,7 @@ nav {
     //****************************END ai_aSCRIBEa_DATA_matrix
     const SAVE_DOCZ = ()=>{ //SAVE
         localStorage.ai_aSCRIBEa_DATA = JSON.stringify(ai_aSCRIBEa_DATA);
+        showUSRMSG('📀 SAVED 📀');
     };
     /************END_LOCAL_STORAGE****************/
 </script>
@@ -929,8 +944,8 @@ nav {
         renderTokensFromTXT();
         setScrollSpeed();
     }
+
     function saveScrollSpeed(){
-        // debugger;
         const speed = document.getElementById('scrollSpeed').value || "100"; //default "normal"
         const txtDOC = getTXT_DOC();
         
@@ -942,37 +957,14 @@ nav {
     }
 
     function setScrollSpeed(){
-        // debugger;
-        // const title = document.getElementById('EDIT_TXT_TITLE').value;
-        // if(title){
         const txtDOC = getTXT_DOC();
         if(txtDOC){
             if(!txtDOC.metadata){ txtDOC.metadata = {}; }  //init
             const speed = txtDOC.metadata.scrollSpeed||"100";//default "normal"
             document.getElementById('scrollSpeed').value = speed;
-            // const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
-            // if (existingIndex > -1) {
-                // const speed = ai_aSCRIBEa_DATA["TXTZ"][existingIndex].scrollSpeed||100;//default "normal"
-                // document.getElementById('scrollSpeed').value = speed;
-            // }
         }
-        //     const txt = document.getElementById('EDIT_TXT_TXT').value;
-        //     const version = document.getElementById('EDIT_TXT_VERSION').value || '';
-        //     const description = document.getElementById('EDIT_TXT_DESCRIPTION').value || '';
-        //     // const metadata = document.getElementById('EDIT_TXT_METADATA').value || '';
-
-        //     if (title && txt) {
-        //         const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
-        //         if (existingIndex !== -1) {
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].txt = txt;
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].version = version;
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].description = description;
-        //             // ai_aSCRIBEa_DATA["TXTZ"][existingIndex].metadata = metadata;
-        //         } else {        
-        // if(ai_aSCRIBEa_DATA["METADATA"].scrollSpeed
-        // const speed = document.getElementById('scrollSpeed').value;
-        // return speed;
     }
+
     function getTXT_DOC(){
         const title = document.getElementById('txtTitle').value;
         if(title){
@@ -983,6 +975,7 @@ nav {
         }
         return null;
     }
+
     function renderTokensFromTXT() {
         const doc = ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX];
         document.getElementById('txtTitle').value = doc.title;
@@ -1027,7 +1020,6 @@ nav {
     if (!ai_aSCRIBEa_DATA["METADATA"]) {
         ai_aSCRIBEa_DATA["METADATA"] = {};
     }
-
 
     function saveTokenProperties(txtIndex, rowIndex, properties) {
         if (!ai_aSCRIBEa_DATA["METADATA"][txtIndex]) {
