@@ -78,6 +78,97 @@ And EXPLORES a DIVERSE SPECTRUM of AI modalities...
 
 ## METHODOLOGY
 
+STEP ONE: CUSTOM AI PROMPT 
+
+Write a song that people will love! 
+Use an easy chord progression, easy to play and learn.
+
+E minor, G major, D major, A major. Repeat.
+
+Add memorable, singable lyrics.
+And hide a moral within the story, for people to decipher.
+
+
+The title of this song will be: Fantasy_Life (or you choose)
+
+Elaborate on the following phrases:
+
+living in a fantasy life, once upon a time, look in the mirror,
+cup of sugar, ivory tower.
+
+Give at least 10 more that are similar in a list below the music.
+
+
+Also use this list of keywords, and list the ones you use below the music:
+
+paradise, crystal palace, dragon, castle, courtyard garden, 
+sugar, cake, candy-coated, spiked, laced, 
+social vices, cold as ice, not nice,
+not free, opressed, supressed, escape,
+forest, woods, animals, bird, deer.
+
+(optional)
+Use these ORIGINAL LYRICS as an example:
+
+...
+
+
+Generate a variation 
+
+
+## LICENSE
+
+open-source technology, variation and generation.
+
+Actual Endless Songs: encoded into digital format, for eternity,
+
+licensed for endless commercialization, by anyone,
+
+ for educational purposes, to generate new variations, but also 
+
+of and by an implicit moral parody - within all extended lyric.
+
+Must include (subtle/hidden) Attribution to: ROX, NEOROX, 
+INFINISONGZ, or Roxy,REX, KIKI, BOBO, 
+enzo, JAX, Sassy, or spazefalcon.
+
+Example "for Roxy with love"
+(include somewhere, anywhere, or not (whatever) no one cares!)
+
+
+# FOR GOOD CAUSE
+
+- Innovative Creative Artistry in the Digital_Age.
+
+- Education, learning, study, and focus_practice.
+
+- Remedy social suppression of talents and ability.
+
+- Enable next generation, hearts and minds, with expressive opportunity.
+
+
+## COMMERCIAL INCENTIVE STRUCTURE (money)
+
+- buy me a coffee and onlyfans.
+
+- ONLYFANS MUSIC LESSONS.
+
+- ONLYFANS AI LESSONS.
+
+- ONLYFANS INFINISONGZ LESSONS.
+
+- ONLYFANS BLUES LESSONS (variations on BLUES for the Digital_Age)
+
+- NO VOCAL TRACKS (BACKING_TRACKS for lyricists.).
+
+
+# OPEN-SOURCE AI CREATIVE PIPELINE:
+
+Enable Open-Source Digital Artistry, for the Digital Age,
+
+
+
+
 ai_SONG_TOOLZ platform includes: 
  - ai_aSCRIPTZa, 
  - ai_CORPORa, 

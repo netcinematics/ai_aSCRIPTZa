@@ -101,3 +101,63 @@ let me give you a piece of advice, kid, its a dog eat dog world out there.
    why cant you get me the (a) cure for my heart
    i dont even know where to start
 
+GET_me_a_CURE - INSTRUMENTAL - ARRANGEMENT
+
+INTRO SEQUENCE (melodic):
+
+E clap sequence
+
+E CLAP
+
+E CLAP
+
+A CLAP 
+
+E strum...
+
+A strum... (2:2-3,...,3-2)
+
+A strum: 1:3\0,3\,0,3\0...
+
+REPEAT INTRO (strum):
+
+E  1:0   2:0      2:3\0,3\0  1:3\0
+
+...
+
+B SECTION:
+E 1:3\0,3\0,3\0... 
+A 1:3\0,3\0,3\0... 3\5
+
+Part II:
+E 1:3\0, 2:3\0, 3:3  2:3  1: 3, 0 0  [2X]
+A 1:3\0, 2:3\2, 3:3  2:3  1: 3, 0 0  [2X]
+E 1:3\0, 2:3\0, 3:3\0 4:3\2 6: 3,3,0  [3X]
+
+Part III:
+
+A 2:2-3, 2:3-0, 2:2-3, 2:3-0,
+A 1:3\0, 3\0, 3\0,...
+
+
+REPEAT CLAP / STRUM - as PUMPING CHORDS
+
+REPEAT B SECTION
+
+Into OUTRO - same as INTRO STRUM
+
+B SECTION:
+E 1:3\0,3\0,3\0... 
+A 1:3\0,3\0,3\0... 3\5
+
+Part II:
+E 1:3\0, 2:3\0, 3:3\0 4:3\2 6: 3,3,0  [3X]
+
+Part III:
+
+A 2:2-3, 2:3-0, 2:2-3, 2:3-0,
+A 1:3\0, 3\0, 3\0,...
+
+E
+
+[THE_END]

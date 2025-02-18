@@ -379,10 +379,10 @@ nav {
     let ai_aSCRIBEa_DATA=null;
     const ai_aSCRIBEa_DATA_LOAD_MOCK_DATA=()=>{ //READ
         ai_aSCRIBEa_DATA = {"TXTZ":[
-            {"title":"txt1","txt":"text 1\n\n[something]\n\n(secondary)\n\naTHIRDZa\n\nUNDER_BAR_SYNTAX\n\nand more text again...","version":"v","description":"description 1","metadata":{}},
-            {"title":"txt2","txt":"text 2","version":"v2","description":"description 2","metadata":{}},
-            {"title":"txt3","txt":"text 3","version":"v3","description":"description 3","metadata":{}},
-        ]};
+            {"title":"txt1","txt":"text 1\n\n[something]\n\n(secondary)\n\naTHIRDZa\n\nUNDER_BAR_SYNTAX\n\nand more text again...","version":"v","description":"description 1","metadata":"metadata 1"},
+            {"title":"txt2","txt":"text 2","version":"v2","description":"description 2","metadata":"metadata 2"},
+            {"title":"txt3","txt":"text 3","version":"v3","description":"description 3","metadata":"metadata 3"},
+        ]}
     };
     const ai_aSCRIBEa_DATA_init=()=>{ //READ from LOCAL STORAGE
         ai_aSCRIBEa_DATA = (localStorage.ai_aSCRIBEa_DATA)?
@@ -423,10 +423,10 @@ nav {
             <label for="description">Description:</label>
             <textarea id="" class="commonTXTAREA  scrollBarV" placeholder="Enter description..." rows="4"></textarea>
         </div>
-        <!-- <div class="control-group" style="display: flex; flex-direction: column;">
+        <div class="control-group" style="display: flex; flex-direction: column;">
             <label for="metadata">Metadata:</label>
             <textarea id="" class="commonTXTAREA  scrollBarV" placeholder="Enter metadata..." rows="4"></textarea>
-        </div> -->
+        </div>
     </div>
 </article><!--END INFO VIEW-->
 <article id="NAV_EDIT" class="app-frame scrollBarV" style="display:none;">
@@ -460,13 +460,13 @@ nav {
         placeholder="Enter description..." rows="4"
         style="color:plum;height: 88px;"></textarea>
     </div>
-    <!-- <div class="control-group" style="display: flex; flex-direction: column;
+    <div class="control-group" style="display: flex; flex-direction: column;
         margin-top:0.222em;">
         <label for="metadata">Metadata:</label>
         <textarea id="EDIT_TXT_METADATA" class="commonTXTAREA  scrollBarV" 
         placeholder="Enter metadata..." rows="4"
         style="color:steelblue;height: 88px;"></textarea>
-    </div>       -->
+    </div>      
 
     </section>
     <div class="control-row">
@@ -503,7 +503,7 @@ nav {
             document.getElementById('EDIT_TXT_TXT').value = '';
             document.getElementById('EDIT_TXT_VERSION').value = '';
             document.getElementById('EDIT_TXT_DESCRIPTION').value = '';
-            // document.getElementById('EDIT_TXT_METADATA').value = '';
+            document.getElementById('EDIT_TXT_METADATA').value = '';
         }
 
         function EDIT_prevTXT() {
@@ -529,20 +529,20 @@ nav {
             const txt = document.getElementById('EDIT_TXT_TXT').value;
             const version = document.getElementById('EDIT_TXT_VERSION').value || '';
             const description = document.getElementById('EDIT_TXT_DESCRIPTION').value || '';
-            // const metadata = document.getElementById('EDIT_TXT_METADATA').value || '';
+            const metadata = document.getElementById('EDIT_TXT_METADATA').value || '';
 
-            if (title && txt) { //todo getTXT_DOC()
+            if (title && txt) {
                 const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
                 if (existingIndex !== -1) {
                     ai_aSCRIBEa_DATA["TXTZ"][existingIndex].txt = txt;
                     ai_aSCRIBEa_DATA["TXTZ"][existingIndex].version = version;
                     ai_aSCRIBEa_DATA["TXTZ"][existingIndex].description = description;
-                    // ai_aSCRIBEa_DATA["TXTZ"][existingIndex].metadata = metadata;
+                    ai_aSCRIBEa_DATA["TXTZ"][existingIndex].metadata = metadata;
                 } else {
                     ai_aSCRIBEa_DATA["TXTZ"].push({
                         title: title, txt: txt,
                         version: version, description:description, 
-                        // metadata: metadata
+                        metadata: metadata
                     });
                     TXT_IDX = ai_aSCRIBEa_DATA["TXTZ"].length - 1;
                 }
@@ -568,7 +568,7 @@ nav {
             document.getElementById('EDIT_TXT_TXT').value = doc.txt;
             document.getElementById('EDIT_TXT_VERSION').value = doc.version;
             document.getElementById('EDIT_TXT_DESCRIPTION').value = doc.description;
-            // document.getElementById('EDIT_TXT_METADATA').value = doc.metadata;
+            document.getElementById('EDIT_TXT_METADATA').value = doc.metadata;
         }
     </script>
         </div>
@@ -727,7 +727,6 @@ nav {
         if (scrollAnimationFrame) {
             lastTimestamp = null;  // Reset timestamp for new speed calculation
         }
-        saveScrollSpeed();
     });
 
     // Initialize 
@@ -913,7 +912,7 @@ nav {
         } else {
             TXT_IDX = ai_aSCRIBEa_DATA["TXTZ"].length - 1;
         }
-        renderPLAYBACK_VIEW();
+        renderTokensFromTXT();
     }
 
     function PLAY_nextTXT() {
@@ -922,67 +921,9 @@ nav {
         } else {
             TXT_IDX = 0;
         }
-        renderPLAYBACK_VIEW();
-    }
-
-    function renderPLAYBACK_VIEW() {
         renderTokensFromTXT();
-        setScrollSpeed();
-    }
-    function saveScrollSpeed(){
-        // debugger;
-        const speed = document.getElementById('scrollSpeed').value || "100"; //default "normal"
-        const txtDOC = getTXT_DOC();
-        
-        if(txtDOC){
-            if(!txtDOC.metadata){ txtDOC.metadata = {}; } //init
-            txtDOC.metadata.scrollSpeed = speed;
-            SAVE_DOCZ();
-        }
     }
 
-    function setScrollSpeed(){
-        // debugger;
-        // const title = document.getElementById('EDIT_TXT_TITLE').value;
-        // if(title){
-        const txtDOC = getTXT_DOC();
-        if(txtDOC){
-            if(!txtDOC.metadata){ txtDOC.metadata = {}; }  //init
-            const speed = txtDOC.metadata.scrollSpeed||"100";//default "normal"
-            document.getElementById('scrollSpeed').value = speed;
-            // const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
-            // if (existingIndex > -1) {
-                // const speed = ai_aSCRIBEa_DATA["TXTZ"][existingIndex].scrollSpeed||100;//default "normal"
-                // document.getElementById('scrollSpeed').value = speed;
-            // }
-        }
-        //     const txt = document.getElementById('EDIT_TXT_TXT').value;
-        //     const version = document.getElementById('EDIT_TXT_VERSION').value || '';
-        //     const description = document.getElementById('EDIT_TXT_DESCRIPTION').value || '';
-        //     // const metadata = document.getElementById('EDIT_TXT_METADATA').value || '';
-
-        //     if (title && txt) {
-        //         const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
-        //         if (existingIndex !== -1) {
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].txt = txt;
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].version = version;
-        //             ai_aSCRIBEa_DATA["TXTZ"][existingIndex].description = description;
-        //             // ai_aSCRIBEa_DATA["TXTZ"][existingIndex].metadata = metadata;
-        //         } else {        
-        // if(ai_aSCRIBEa_DATA["METADATA"].scrollSpeed
-        // const speed = document.getElementById('scrollSpeed').value;
-        // return speed;
-    }
-    function getTXT_DOC(){
-        const title = document.getElementById('txtTitle').value;
-        if(title){
-            const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
-            if (existingIndex > -1) {
-                return ai_aSCRIBEa_DATA["TXTZ"][existingIndex];
-            }
-        }
-        return null;
-    }
     function renderTokensFromTXT() {
         const doc = ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX];
         document.getElementById('txtTitle').value = doc.title;
@@ -1027,7 +968,6 @@ nav {
     if (!ai_aSCRIBEa_DATA["METADATA"]) {
         ai_aSCRIBEa_DATA["METADATA"] = {};
     }
-
 
     function saveTokenProperties(txtIndex, rowIndex, properties) {
         if (!ai_aSCRIBEa_DATA["METADATA"][txtIndex]) {
@@ -1115,7 +1055,7 @@ function showPLAYBACK() {
     NAV_EDIT.style.display = 'none';
     NAV_PLAYBACK.style.display = 'block';
     // init_PLAYBACK_VIEW();
-    renderPLAYBACK_VIEW();
+    renderTokensFromTXT();
 }
 </script>
 
