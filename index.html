@@ -361,12 +361,73 @@ nav {
     min-width: 50px;
 }
 
+.middle-size {
+    height: 300px !important;
+}
+
 .maximized {
     height: calc(100vh - 322px) !important;
 }
 
 .hidden {
     display: none !important;
+}
+
+#countdownFrame{
+    position: fixed; 
+    width:80%;
+    height: 80%;
+    z-index: 10;
+    display:none;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 5px 15px;
+    border-radius: 13px;
+    border: 1px solid aqua;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+}    
+#countdown {
+    transform: translateX(-50%);
+    transform: translateY(40%);
+    display:flex;
+    background: rgba(0, 0, 0, 0.8);
+    color: lime;
+    padding: 4%;
+    font-family: monospace;
+    font-size: 4.444em;        
+    border-radius: 13px;
+    border: 1px solid aqua;
+}
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    display: none;
+    border-radius: 13px;
+    border: 1px solid aqua;
+    color: lime;
+    font-size: 5em;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace; */
+}
+.timer-display {
+
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: lime;
+    padding: 5px 15px;
+    border-radius: 13px;
+    border: 1px solid aqua;
+    font-family: monospace;
+    font-size: 1.2em;
+    display: none;
+    margin-left: 2em;
 }
 </style>
 </head>
@@ -414,8 +475,12 @@ nav {
     /************END_LOCAL_STORAGE****************/
 </script>
     
-    <h1 style="margin: 0px; display: flex; width: 100%; justify-content: center; 
-    font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
+<h1 style="margin: 0px; display: flex; width: 100%; justify-content: center; 
+font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
+
+<aside id="countdownFrame">
+    <div id="countdown"></div>
+</aside>
 
 <article id="NAV_INFO" class="app-frame scrollBarV" style="display:none;">
     <h2 style="align-self: flex-start; color: steelblue; 
@@ -438,10 +503,7 @@ nav {
             <label for="description">Description:</label>
             <textarea id="" class="commonTXTAREA  scrollBarV" placeholder="Enter description..." rows="4"></textarea>
         </div>
-        <!-- <div class="control-group" style="display: flex; flex-direction: column;">
-            <label for="metadata">Metadata:</label>
-            <textarea id="" class="commonTXTAREA  scrollBarV" placeholder="Enter metadata..." rows="4"></textarea>
-        </div> -->
+
     </div>
 </article><!--END INFO VIEW-->
 <article id="NAV_EDIT" class="app-frame scrollBarV" style="display:none;">
@@ -475,13 +537,6 @@ nav {
         placeholder="Enter description..." rows="4"
         style="color:plum;height: 88px;"></textarea>
     </div>
-    <!-- <div class="control-group" style="display: flex; flex-direction: column;
-        margin-top:0.222em;">
-        <label for="metadata">Metadata:</label>
-        <textarea id="EDIT_TXT_METADATA" class="commonTXTAREA  scrollBarV" 
-        placeholder="Enter metadata..." rows="4"
-        style="color:steelblue;height: 88px;"></textarea>
-    </div>       -->
 
     </section>
     <div class="control-row">
@@ -495,23 +550,6 @@ nav {
             </div>
     <script>
         let TXT_IDX = 0; //index of current document
-        // let TXT_DOC_DATA = [
-        //     {title: 'txt1', txt: `text 1
-            
-        //     [something]
-            
-        //     (secondary)
-            
-        //     aTHIRDZa
-            
-        //     UNDER_BAR_SYNTAX
-            
-        //     and more text again...`
-        //     ,version:'v', 
-        //         description:'description 1', metadata:'metadata 1'},
-        //     {title: 'txt2', txt: 'text 2',version:'v', 
-        //         description:'description 2', metadata:'metadata 2'},
-        // ];
 
         function newTXT() {
             document.getElementById('EDIT_TXT_TITLE').value = '';
@@ -624,14 +662,12 @@ nav {
                     </select>
                 </div>
                 <button id="autoScrollBtn">Auto Scroll</button>
-                <!-- <button id="toggleSize" onclick="toggleFrameSize()" class="size-btn">
-                    <span class="maximize">🔼</span>
-                </button> -->
+                <div id="timer" class="timer-display">00:00</div>
             </div>            
         </div>
 
         <div id="PAGE_EDIT_CONTROL_ROW" class="control-row">
-            <div class="controlBar" style="border:1px solid purple; border-radius:13px;">
+            <div class="controlBar" style="border:1px solid steelblue; border-radius:13px;">
 
                 <div class="controls-group" style="    margin-top: 2%;">
                     <label class="checkboxFrame">
@@ -691,6 +727,8 @@ nav {
     let checkboxStates = [];
     let isSelectAllChecked = false;
     let isUserScrolling = false;
+    let startTime = null;
+    let timerDisplay = null;
 
     // Add scroll event listener
     document.getElementById('renderTokenFrame').addEventListener('scroll', function(e) {
@@ -700,12 +738,13 @@ nav {
     });
 
     function smoothScroll(timestamp) {
+        updateTimer(timestamp);
         const frame = document.getElementById('renderTokenFrame');
         const speed = parseInt(document.getElementById('scrollSpeed').value);
         
         if (!lastTimestamp) lastTimestamp = timestamp;
         const elapsed = timestamp - lastTimestamp;
-        
+        // console.log(speed,elapsed);
         // Calculate scroll amount based on speed, Lower speed value = faster scrolling
         const scrollAmount = (elapsed / speed) * 2;
 
@@ -721,18 +760,83 @@ nav {
         scrollAnimationFrame = requestAnimationFrame(smoothScroll);
     }
 
-    // Fixed toggle auto scroll
-    function toggleAutoScroll() {
+    function updateTimer(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const seconds = Math.floor((timestamp - startTime) / 1000);
+        const minutes = Math.floor(seconds / 60);
+        const displaySeconds = String(seconds % 60).padStart(2, '0');
+        const displayMinutes = String(minutes).padStart(2, '0');
+        document.getElementById('timer').textContent = `${displayMinutes}:${displaySeconds}`;
+    }
+
+    function countdown() {
+        // const countdownFrame = document.getElementById('countdownFrame');
+        // const countdown = document.getElementById('countdown');
+        // countdownFrame.style.display = 'flex';
+        // let count = 4;
+        
+        // const countInterval = setInterval(() => {
+        //     if (count > 0) {
+        //     countdown.textContent = count;
+        //     count--;
+        //     } else {
+        //         clearInterval(countInterval);
+        //         countdownFrame.style.display = 'none';
+        //         startTime = null;
+        //         scrollAnimationFrame = requestAnimationFrame(smoothScroll);
+        //     }
+        // }, 1000);
+        return new Promise((resolve) => {
+            let count = 5;
+            const countdownFrame = document.getElementById('countdownFrame');
+            const countdown = document.getElementById('countdown');
+            countdown.textContent = "Ready";
+            countdownFrame.style.display = 'flex';
+            
+            const countInterval = setInterval(() => {
+                if (count > 0) {
+                    countdown.textContent = count;
+                    count--;
+                } else {
+                    clearInterval(countInterval);
+                    countdownFrame.style.display = 'none';
+                    countdown.textContent = '';
+                    // startTime = 0;
+                    // scrollAnimationFrame = requestAnimationFrame(smoothScroll);
+                    resolve();
+                }
+            }, 1000);
+        });
+    }
+
+    async function toggleAutoScroll() {
         const btn = document.getElementById('autoScrollBtn');
+        const timer = document.getElementById('timer');
+        const frame = document.getElementById('renderTokenFrame');
+        
         if (scrollAnimationFrame) {
             cancelAnimationFrame(scrollAnimationFrame);
             scrollAnimationFrame = null;
             lastTimestamp = null;
+            startTime = null;
             btn.textContent = 'Auto Scroll';
-            btn.classList.remove('active');
+            timer.style.display = 'none';
         } else {
+            // Check if scrolled to bottom
+            if (frame.scrollTop >= frame.scrollHeight - frame.clientHeight) {
+                frame.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                scrollTopFloat = 0;
+                // Wait for scroll to complete
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+            
             btn.textContent = 'Stop Scrolling';
-            btn.classList.add('active');
+            timer.style.display = 'block';
+            await countdown();
+            startTime = null;
             scrollAnimationFrame = requestAnimationFrame(smoothScroll);
         }
     }
@@ -994,27 +1098,40 @@ nav {
     }
 
     let isMaximized = false;
+    let sizeState = 0; // 0=min, 1=300px, 2=max
 
-    function toggleFrameSize() {
+    function toggleFrameSize(init) {
         const frame = document.getElementById('renderTokenFrame');
         const controls = document.getElementById('PAGE_EDIT_CONTROL_ROW');
-        const hint = document.getElementById('KEYBOARD_HINT_ROW');
+        const hint = document.querySelector('.keyboard-hint');
         const btn = document.getElementById('toggleSize');
-
-        isMaximized = !isMaximized;
-        // debugger;
-        if (isMaximized) {
-            frame.classList.add('maximized');
-            controls.classList.add('hidden');
-            hint.classList.add('hidden');
-            btn.innerHTML = '<span>▼</span>';
-        } else {
-            frame.classList.remove('maximized');
-            controls.classList.remove('hidden');
-            hint.classList.remove('hidden');
-            btn.innerHTML = '<span>▲</span>';
+        
+        sizeState = (sizeState + 1) % 3;
+        sizeState = init ? init : sizeState;
+        
+        switch(sizeState) {
+            case 0: // min
+                frame.classList.remove('maximized', 'middle-size');
+                controls.classList.remove('hidden');
+                hint.classList.remove('hidden');
+                btn.innerHTML = '<span>▲</span>';
+                break;
+            case 1: // 300px
+                frame.classList.remove('maximized');
+                frame.classList.add('middle-size');
+                controls.classList.remove('hidden');
+                hint.classList.remove('hidden');
+                btn.innerHTML = '<span>△</span>';
+                break;
+            case 2: // max
+                frame.classList.add('maximized');
+                frame.classList.remove('middle-size');
+                controls.classList.add('hidden');
+                hint.classList.add('hidden');
+                btn.innerHTML = '<span>▼</span>';
+                break;
         }
-    } toggleFrameSize();
+    } toggleFrameSize(2);
 
     // Initialize metadata structure if not exists
     if (!ai_aSCRIBEa_DATA["METADATA"]) {

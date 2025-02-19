@@ -11,112 +11,169 @@
 
 ********************************//
 
+[AUDIENCE_INSTRUCTION: when you hear XX, you clap,clap]
 
-[INTRO](arp:em,G,D...2:3\2\0...)
+[INSTRUMENTAL]
 
+
+[e:2:3,1:0|e:2:3,1:0|]
+[G:2:3,1:0|G:2:3,1:0]
+[D:1:3,1:2|D:1:2,1:0]
+[A:2:3,1:0|A:2:3,2:0]
+
+[INTRO] 
+
+[e:2:3,1:0, G:2:3,1:0, D:1:2,0, A:2:3,2,0]
+(XX)
+<whisper>
 (em) a girl (G) asks,
 for a (D) cup of (A) sugar <clap,clap>
-(em) to bake a (G) cake or (D) something (A) sweet <yeah-ah>
-(em) she dont (G) know it, but its (D) laced with societ(A)ies 
-(em) vices, powder sugar, spiked with little sur-pri-ses
-(4X) it says it has love inside, 
+(em) to bake a (G) cake for (D) somebody (A) sweet <yeah-ah>
+(em) she dont (G) know-it-yet, its (D) laced with societ(A)ies 
+(em) vices, 
+(em,G,D,A)
+(em) little (G) cupcakes,  with (D)little (A) sur-pri-ses
+<whisper>
+(4X) it says it has love inside, (X)
 
-[CHORUS1]
-(em) Oh ... (G) oh-oh o,  take a (D) look in (A) mirr-(A7)-or 
-(em) once upon a (G) ti-ime
+<clap ... clap>
 
-(D) born into (A) para-di-(em)-ise 
+[CHORUS1:subdued,whisper]
+(em) Oh ~ Oh (G) oh, She took a (D) look in (A) mirr-(A7)-or 
+(em) once upon a (G) ti-ime (XX)
 
-(em) oh ... oh (G)|[em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
-(D)reflect on it (A) fondly some (em) ti-mes
+(D) livin in (A) para-di-i-ise (em)
 
-(em) twist your (G) wish into a (D) fantasy (A) ... <yeah>
-(em) twist your (G) wish into a fantasy (D) ... <oh>
-(em) we twist a (G) wish into a fantasy (D) ... [hold_2X]
+(em) oh ~ oh She (G)|[em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
+(D)remembers it (A) fondly at (em) ti-mes
+
+(em) she twist her (G) wish into a (D) remedy (A) ... <oh-ohh-ohh>
+(em) she twist her (G) wish into a remedy (D) ... <ah-ahh-ah>
+(em) she turn the  (G) key into a fabulous (D) ... [hold_2X]
 (A) life... <li - i - i - i - ife> ... [hold_2X]
 [A:1:3-0,3-0,1:3,3/]
 
 
 (em) castle, on a (G) hill
-she will (D)dance for-(A)-ev-(A7)-er <clap,clap>
-(em) while all the other (G) girls are
-(D) cold as (A) ice <whoa-oh>  <clap,clap>
+she plans to (D)dance for-(A)-ev-(A7)-er <clap,clap>
+(em) while all good (G) towns people
+(D) just look (A) away <yeah-ah> 
 (em) she leaves them (G) all behind 
 for (D) /an-i-mals\ she (A) finds in the (em) fo-rest, 
 With her (G) dog, a cat, a (D) bird and a (A) deer.<yeah-ah>
-[A:1:3-0,3-0,3,3/]
+[A:1:3-0,3-0,3,3...]
 
-[CHORUS2]
+[CHORUS2, still subdued]
 (em) oh ~ (G) oh,  take a (D) look in a (A) mirr-(A7)-or 
-(em) once upon a (G) ti-ime 
+(em) once upon a (G) ti-ime (XX)
 
-(D) livin a (A) fantasy (em) li-fe 
+(D) livin in (A) para-di-i-ise (em)
 
-(em) oh ~ oh .. (G)|[V:em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
+(em) oh ~ oh .. and (G)|[V:em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
  re(D)flect on it (A) fondly some (em) ti-mes
 
-(em) twist your (G) wish into a (D) fantasy (A) ... <yeah>
-(em) twist your (G) wish into a fantasy (D) ... <oh>
-(em) we twist a (G) wish into a fantasy (D) ... [hold_2X]
+(em) twist your (G) wish into a (D) remedy (A) ...<oh-ohh-ohh>
+(em) twist your (G) wish into a remedy (D) ...<ah-ahh-ah>
+(em) we turn a (G) key into a fabulous (D) ... [hold_2X]
 (A) life... <li - i - i - i - ife>
-[A:1:3-0,3-0,3-3...] 
+[A:2:3-2,3-2,1:3,3/\] 
 
-(em) princess on her (G) phone
-in an (D) ivory (A) tower <clap,clap>
-(em) bed full of (G) pillows 
-but no (D) key to her (A) heart <whoa-oh>
-(em) from her (G) tower
-she can (D) see all the (A) way from her 
+(em) princess on her (G) throne
+in a (D) Crystal (A) Palace <clap,clap>
+(em) hand full of (G) rings
+but no (D) key for her (A) heart <whoa-oh>
+(em) in Ivory Tower  
+(G) she can (D) see all the (A) way from a 
 (em) valley to the (G) sea
-but she can (D) never ever (A) get there
+but  can (D) never ever (A) get there
 
 (XX) cause shes not free (XX) [scratchy-voice]
 <clap,clap>
-(XX) and the truth is... (XX)
 
-(em)shes gotta  (G) work
+[Verse3: building up]
+(em) truth she gotta  (G) work
 in a (D) downtown (A) job that she (em) hates
 eight days a (G) week, she slaves
 no (D) ene-rgy (A) left for her-(em)-self
 But that is (G) how she finds
 e(D)scape that ex(A)ists in her (em) minds eye
-(em) twist a (G) wish into a (D) fantasy  (A) 
+(em) twist a (G) wish into a (D) fabulous  (A) life <yeah-ah>
 
-...(A)... <ah-ah-ah-aaaa-ah> 
+[A:1:3-0,3-0,1:3,3/]
 
-(em) twist your (G) wish into a (D) fantasy (A) life <yeah-ah>
-(em) twist your (G) wish into a fantasy (D) life <whoa-oh>
-(em) we twist a (G) wish into a fantasy (D) ... [hold_2X]
+[BRIDGE:_]
+One, brush with fire, and its all over
+
+One, little spark, and its all gone.
+
+(XX) now shes a runaway (XX) [scratchy-voice]
+
+
+[CHORUS3:_medium]
+
+(em) oh ~ (G) oh,  take a (D) look in the (A) mirr-(A7)-or 
+(em) once upon a (G) ti-ime (XX)
+
+(D) livin a (A) fabulous (em) li-ife
+
+(em) oh ~ oh .. and (G)|[V:em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
+ re(D)flect on it (A) fondly at (em) ti-mes
+
+(em) and twist that (G) wish into a (D) fabulous (A) life
+[A:2:3-2,3-2,1:3,3/] 
+
+
+
+OH - OH -ohh...
+
+(em) twist that (G) wish into a (D) remedy (A) ... <oh-ohh>
+(em) twist that (G) wish into a remedy (D) ... <ah-ahh-ah>
+(em) turn a (G) key into a fabulous (D) ... [hold_2X]
 (A) life... <li - i - i - i - ife>
 [A:2:3-2,3-2,3/5,5th harmonic] 
 
-(em) in a Crystal (G) Palace
-where a (D) beauty queen (A) plays hide and seek
-(em) with candy coated (G) dreams
-(D) and dragons (A) out-side <clap-clap>
-(em) They howl at (G) midnight, as they
-(D) raid her court-yard (A) gar-den (XX)
+She...
+
+(em) plays hide and (G) seek
+in a (D) tranquil (A) forest <clap,clap>
+(em) with candy treats (G) to keep the
+(D) dragons (A) in line <yeah-ah>
+(em) They howl all (G) night, as they
+(D) raid the courtyard (A) gar-den <yeah-ah>
+(em) one breath of (G) fire,
+and it (D) all is dist(A)royed. <yeah>
 (em) one breath of (G) fire,
 and it (D) all is dist(A)royed. [hold_2X]
 
+[OUTSECTION:_embellishment]
+[e:2:3,1:0, G:2:3,1:0, D:1:2,0, A:2:3,2]
 (em) one [hold_2X]
-(em) kiss of (G) fire ... [hold_2X]
-and it (D) all...[hold_2X]
-is (A) ashes. 
-(X) And we all fall dow-wn. <whisper>
-[A:1:3-0,3-0,3,3/] 
+(em) kiss (G) fire ... [hold_2X]
+and its (D5) far..[hold_2X]
+(A5) from over 
+(em) one [hold_2X]
+(em) lonely (G) ember ... [hold_2X]
+and its (D5) all...[hold_2X]
+(A5) ashes
+(em) one [hold_2X]
+(em) little (G) spark ... [hold_2X]
+brings a (D5) heart...[hold_2X]
+(A5) into the da-ah-ah-a-ark
+
+(XX) and we all fall dow-wn. <whisper>
+<clap ... clap>
 
 [CHORUS4]
-(em) Oh ~ Oh (G),  take a (D) look in a (A) mirr-(A7)-or
-(em) once upon a (G) ti-ime
+(em) Oh ~ Oh (G),  take a (D) look in the (A) mirr-(A7)-or
+(em) once upon a (G) ti-ime (XX)
 
-(D) your livin a (A) fantasy (em) li-ife
-(em) Oh ~ Oh,  (G)|[em+3:4,3:2\4:4,3:2\4:4,] [XX,D,A]
+(D) livin in (A) paradi-ise (em) 
+(em) Oh ~ Oh,  and (G)|[em+3:4,3:2\4:4,3:2\4:4,] [XX,D,A]
  reflect(D) on it (A) fondly some (em) times
 
-(em) twist a (G) wish into a (D) fantasy (A) ... <oh?>
-(em) twist a (G) wish into a (D) fantasy (A) ... <whaaaa?>
-(em) we twist a (G) wish into a (D) fantasy [Hold2X]
+(em) twist a (G) wish into a (D) remedy (A) ... <oh-ohh>
+(em) twist a (G) wish into a (D) remedy (A) ... <ah-ahhh>
+(em) turn a (G) key into a fabulous (D) ... [hold_2X]
 
 (A) life... <li - i - i - i - ife>
 
