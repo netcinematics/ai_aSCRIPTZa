@@ -113,8 +113,39 @@ Use these ORIGINAL LYRICS as an example:
 ...
 
 
-Generate a variation 
+### ENDLESS_VARIATIONZ
 
+The longest song of all time, is made of endless_variations!
+
+This is the PROCESS, to GENERATE, longest_songs_of_all_time.
+
+Where you can Generate a variation!
+
+Where EVERYONE can GENERATE_a_VARIATION.
+
+There are multipMULTI_TRAX.
+
+- Genesis_TRAX: the original recordings in numbered chronological order of EVOLUTION.
+
+- MORAL_STORY_TRAX: lyrical, moral story. Uniquew Main_Titles,  with same Sub_title.
+
+- INSTRUMENTAL_TRAX: symphony like arrangement. Many instruments with solo rock out sections.
+
+- EASY_PLAY_TRAX: beginner guitar version.
+
+- POP_HIT_TRAX: the version most likely to be a pop hit.
+
+- WHISTLE_TRAX: beginner singing and whistling to get melody clear.
+
+## HIT_POP_SONGZ
+
+HITPOPSONGZ, from the HITPOP genre,
+
+and the HIT_POP_SONG_FACTORY.
+
+The infinite, iterative GENERATION of HITPOPSONGZ,
+
+ is the output result of the HIT_POP_SONG_FACTORY.
 
 ## LICENSE
 

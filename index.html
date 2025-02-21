@@ -399,23 +399,7 @@ nav {
     border-radius: 13px;
     border: 1px solid aqua;
 }
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1000;
-    display: none;
-    border-radius: 13px;
-    border: 1px solid aqua;
-    color: lime;
-    font-size: 5em;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace; */
-}
+
 .timer-display {
 
     transform: translateX(-50%);
@@ -454,9 +438,9 @@ nav {
     let ai_aSCRIBEa_DATA=null;
     const ai_aSCRIBEa_DATA_LOAD_MOCK_DATA=()=>{ //READ
         ai_aSCRIBEa_DATA = {"TXTZ":[
-            {"title":"txt1","txt":"text 1\n\n[something]\n\n(secondary)\n\naTHIRDZa\n\nUNDER_BAR_SYNTAX\n\nand more text again...","version":"v","description":"description 1","metadata":{}},
-            {"title":"txt2","txt":"text 2","version":"v2","description":"description 2","metadata":{}},
-            {"title":"txt3","txt":"text 3","version":"v3","description":"description 3","metadata":{}},
+            {"main_title":"txt1", "sub_title":"subtitle1", "txt":"text 1\n\n[something]...", "version":"v", "description":"description 1", "metadata":{}},
+            {"main_title":"txt2", "sub_title":"subtitle2", "txt":"text 2", "version":"v2", "description":"description 2", "metadata":{}},
+            {"main_title":"txt3", "sub_title":"subtitle3", "txt":"text 3", "version":"v3", "description":"description 3", "metadata":{}}
         ]};
     };
     const ai_aSCRIBEa_DATA_init=()=>{ //READ from LOCAL STORAGE
@@ -513,11 +497,21 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     display: flex; flex-direction: column; gap: 10px;
     padding: 1em 5%">
     <div class="control-row" style="justify-content: space-between;">
-        <label for="song_title">Title:</label>
-        <input id="EDIT_TXT_TITLE" type="text" id="song_title" placeholder="Enter song title..."
+        <label for="EDIT_TXT_TITLE_MAIN">Title:</label>
+        <input id="EDIT_TXT_TITLE_MAIN" type="text" placeholder="Enter song title..."
         style="color:burlywood;width:50% ">
         <button onclick="EDIT_prevTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;"><</button>
         <button onclick="EDIT_nextTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;">></button>
+    </div>
+    <div class="control-group">
+        <!-- <label>MAIN TITLE:</label>
+        <input type="text" id="EDIT_TXT_MAIN_TITLE" placeholder="Main Title..." 
+            style="color:burlywood; margin-bottom: 1em;"> -->
+        </input>
+        <label>SUB TITLE:</label>
+        <input type="text" id="EDIT_TXT_SUB_TITLE" placeholder="Sub Title..." 
+            style="color:burlywood; margin-bottom: 1em;">
+        </input>
     </div>
     <div class="control-group" style="display: flex; flex-direction: column;">
         <label for="txt">TXT:</label>
@@ -552,7 +546,9 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         let TXT_IDX = 0; //index of current document
 
         function newTXT() {
-            document.getElementById('EDIT_TXT_TITLE').value = '';
+            document.getElementById('EDIT_TXT_TITLE_MAIN').value = '';
+            // document.getElementById('EDIT_TXT_MAIN_TITLE').value = '';
+            document.getElementById('EDIT_TXT_SUB_TITLE').value = '';
             document.getElementById('EDIT_TXT_TXT').value = '';
             document.getElementById('EDIT_TXT_VERSION').value = '';
             document.getElementById('EDIT_TXT_DESCRIPTION').value = '';
@@ -578,22 +574,27 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         }
 
         function saveTXT_EDIT() {
-            const title = document.getElementById('EDIT_TXT_TITLE').value;
+            const main_title = document.getElementById('EDIT_TXT_TITLE_MAIN').value;
+            // const main_title = document.getElementById('EDIT_TXT_MAIN_TITLE').value;
+            const sub_title = document.getElementById('EDIT_TXT_SUB_TITLE').value || '';
             const txt = document.getElementById('EDIT_TXT_TXT').value;
             const version = document.getElementById('EDIT_TXT_VERSION').value || '';
             const description = document.getElementById('EDIT_TXT_DESCRIPTION').value || '';
             // const metadata = document.getElementById('EDIT_TXT_METADATA').value || '';
 
-            if (title && txt) { //todo getTXT_DOC()
-                const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
+            if (main_title && txt) { //todo getTXT_DOC()
+                const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.main_title === main_title);
                 if (existingIndex !== -1) {
-                    ai_aSCRIBEa_DATA["TXTZ"][existingIndex].txt = txt;
-                    ai_aSCRIBEa_DATA["TXTZ"][existingIndex].version = version;
-                    ai_aSCRIBEa_DATA["TXTZ"][existingIndex].description = description;
-                    // ai_aSCRIBEa_DATA["TXTZ"][existingIndex].metadata = metadata;
+                    ai_aSCRIBEa_DATA["TXTZ"][existingIndex] = {
+                        // title: title, 
+                        main_title: main_title, sub_title: sub_title, txt: txt,
+                        version: version, description:description, 
+                        // metadata: metadata
+                    };
                 } else {
                     ai_aSCRIBEa_DATA["TXTZ"].push({
-                        title: title, txt: txt,
+                        // title: title, 
+                        main_title: main_title, sub_title: sub_title, txt: txt,
                         version: version, description:description, 
                         // metadata: metadata
                     });
@@ -604,8 +605,8 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         }
 
         function deleteTXT() {
-            const title = document.getElementById('EDIT_TXT_TITLE').value;
-            const index = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
+            const main_title = document.getElementById('EDIT_TXT_TITLE_MAIN').value;
+            const index = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.main_title === main_title);
             if (index !== -1) {
                 ai_aSCRIBEa_DATA["TXTZ"].splice(index, 1);
                 newTXT();
@@ -617,7 +618,10 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         function init_EDIT_VIEW() {
             if(!ai_aSCRIBEa_DATA || !ai_aSCRIBEa_DATA["TXTZ"] || !ai_aSCRIBEa_DATA["TXTZ"].length) {return;}
             const doc = ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX];
-            document.getElementById('EDIT_TXT_TITLE').value = doc.title;
+            // document.getElementById('EDIT_TXT_TITLE_MAIN').value = doc.title;
+            document.getElementById('EDIT_TXT_TITLE_MAIN').value = doc.main_title;//todo
+            // document.getElementById('EDIT_TXT_MAIN_TITLE').value = doc.main_title;
+            document.getElementById('EDIT_TXT_SUB_TITLE').value = doc.sub_title || ''
             document.getElementById('EDIT_TXT_TXT').value = doc.txt;
             document.getElementById('EDIT_TXT_VERSION').value = doc.version;
             document.getElementById('EDIT_TXT_DESCRIPTION').value = doc.description;
@@ -632,7 +636,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
 
     <div class="control-group">
         <label>TITLE:</label>
-        <input type="text" id="txtTitle" placeholder="Title..." 
+        <input type="text" id="PLAYBACK_TXT_TITLE" placeholder="Title..." 
             style="color:burlywood; margin-bottom: 1em;">
         </input>
         <button onclick="PLAY_prevTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;">◀</button>
@@ -1070,19 +1074,20 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     }
 
     function getTXT_DOC(){
-        const title = document.getElementById('txtTitle').value;
-        if(title){
-            const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.title === title);
+        const main_title = document.getElementById('PLAYBACK_TXT_TITLE').value;
+        if(main_title){
+            const existingIndex = ai_aSCRIBEa_DATA["TXTZ"].findIndex(doc => doc.main_title === main_title);
             if (existingIndex > -1) {
                 return ai_aSCRIBEa_DATA["TXTZ"][existingIndex];
-            }
+            } else { showUSRMSG('⚠️ TXT NOT FOUND ⚠️');  }
         }
         return null;
     }
 
     function renderTokensFromTXT() {
+        debugger;
         const doc = ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX];
-        document.getElementById('txtTitle').value = doc.title;
+        document.getElementById('PLAYBACK_TXT_TITLE').value = doc.main_title;
         let TOKEN_TXT = doc.txt.split('\n');
 
         TOKEN_TXT = TOKEN_TXT.filter(token => token.trim() !== '');

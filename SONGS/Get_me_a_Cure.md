@@ -105,7 +105,7 @@ GET_me_a_CURE - INSTRUMENTAL - ARRANGEMENT
 
 INTRO SEQUENCE (melodic):
 
-E clap sequence
+E CLAP (5th fret ~)
 
 E CLAP
 
@@ -113,13 +113,17 @@ E CLAP
 
 A CLAP 
 
-E strum...
+E STRUM...
 
-A strum... (2:2-3,...,3-2)
+A STRUM...
+
+E STRUM PUMPING...
+
+A STRUM PUMPING (2:2-3,...,3-2)
 
 A strum: 1:3\0,3\,0,3\0...
 
-REPEAT INTRO (strum):
+REPEAT INTRO (STRUM):
 
 E  1:0   2:0      2:3\0,3\0  1:3\0
 
@@ -142,6 +146,11 @@ A 1:3\0, 3\0, 3\0,...
 
 REPEAT CLAP / STRUM - as PUMPING CHORDS
 
+E PUMPING, (5th fret ~)
+A PUMPING,
+E PUMPING, 
+A PUMPING,
+
 REPEAT B SECTION
 
 Into OUTRO - same as INTRO STRUM
@@ -156,8 +165,9 @@ E 1:3\0, 2:3\0, 3:3\0 4:3\2 6: 3,3,0  [3X]
 Part III:
 
 A 2:2-3, 2:3-0, 2:2-3, 2:3-0,
+A 2:3-2-0-2|2:3-2-0-2
 A 1:3\0, 3\0, 3\0,...
 
-E
+E (X)
 
 [THE_END]
