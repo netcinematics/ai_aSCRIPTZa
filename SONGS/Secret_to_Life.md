@@ -10,7 +10,9 @@
 
  - ai variations on music: commercial use license,
 
- - attribute "original music by spazefalcon/ROXZILLA"
+ - attribute "original music by spazefalcon"
+
+ contact: spazeone@protonmail.com
 
 ********************************//
 

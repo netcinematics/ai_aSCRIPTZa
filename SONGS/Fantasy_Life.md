@@ -1,21 +1,43 @@
 /*********************************
-
 # Fantasy_Life
-
  - by spazefalcon 2000-2025 (c)
  - all words and music, original by human, not ai.
  - ai variations on code: encouraged MIT open-source.
  - ai variations on music: commercial use license,
- - attribute example: "original music by spazefalcon & ROXZY"
+ - attribute example: "original music by spazefalcon"
  - this specific version is use by attribution 
-
+ contact: spazeone@protonmail.com
 ********************************//
-
 [AUDIENCE_PARTICIPATION: when you see <clap,clap>, you clap,clap]
-
 [INSTRUMENTAL:]
-
 [e,G,D,A|...@~...]
+𝄞 𝄢 𝄡 𝄫 𝄪 𝄭 𝄮 𝄯 𝄰 𝄱 𝄲 𝄳 𝄴 𝄵 𝄶 𝄷 𝄸 𝄹 𝄺 𝄻
+𝄼 𝄽 𝄾 𝄿 𝅀 𝅁 𝅂  𝅜 𝅝 𝅗𝅥 𝅘𝅥 𝅘𝅥𝅮 𝅘𝅥𝅯 𝅘𝅥𝅰 𝅘𝅥𝅱 𝅘𝅥𝅲 𝅥 𝅦 𝅧 𝅨 𝅩 𝅪 𝅫 𝅬 𝅭 𝅮 𝅯𝅒 𝅓 𝅔 𝅕 𝅖 𝅗 𝅘  𝅦  𝅧 𝅨 𝅩 
+
+𝅪 𝅫 𝅬 𝅭
+𝅃 𝅄 𝅅 
+𝅆 𝅇 
+𝅈 𝅉 
+𝅊 𝅋 
+𝅌 𝅍 
+𝅎 𝅏 
+𝅐 𝅑 
+𝅒 𝅓 
+𝅔 𝅕 
+𝅗 𝅘
+
+
+𝅲 𝆃 𝆄 𝆅 𝆆 𝆇 𝆈 𝆉 𝆊 𝆋 𝆌 𝆍 𝆎 𝆏 𝆐 𝆑 𝆒 𝆓 𝆔 𝆕 𝆖 𝆗 𝆘 𝆙 𝆚 𝆛 𝆜 𝆝 𝆞 𝆟 𝆠 𝆡 𝆢 𝆣 𝆤 𝆥 
+
+𝄞 𝄢 𝄡 𝄫 𝄪 𝄭 𝄮 𝄯 𝄰 𝄱 𝄲 𝄳 𝄴 𝄵 𝄶 𝄷 𝄸 𝄹 𝄺 𝄻
+𝄼 𝄽 𝄾 𝄿 𝅀 𝅁 𝅂 𝅃 𝅄 𝅅 𝅆 𝅇 𝅈 𝅉 𝅊 𝅋 𝅌 𝅍 𝅎 𝅏
+[AI_SONGZ]
+[AI_ROXZ]
+[HARMONIXZ:]
+[MELODIXZ:]
+
+
+
 
 [INTRO:long argeggiation is doubled with down beat notes to prime the sound later]
 [INTRO:arp,3_bass_notes.ring-melody|short] 
@@ -25,138 +47,118 @@
 (em) a girl (G) asks,
 for a (D) cup of (A) sugar <clap,clap>
 (em) to bake a (G) cake (D) for someone (A) sweet <yeah-ah>
-(em) they dont (G) know-it, but its (D) laced with societ(A)ies 
+(em) dont (G) know-it yet, but its (D) laced with societ(A)ies 
 (em) vices, 
-(em) powdered (G) sugar (G)  with a (D)little (A) sur-pri-ses
+[FILLZ:2:3-2,3-2,3/7\~5]
+(em) powder (G) kegs (G) packed with (D) toy (A) sur-pri-ses
 <whisper>
 (4X) it has love inside, it says (X)
-
+<sing with me now>
+<clap ... clap> 1, 2, 3, 4
 <clap ... clap>
-
 [CHORUS1:subdued,whisper]
-(em) Oh ~ Oh (G) oh, take a (D) look in a (A) mirr-(A7)-or 
+(em) Oh ~ Oh (G) she, take a (D) look in a (A) mirr-(A7)-or 
 (em) once upon a (G) ti-ime <clap,clap>
-
 (D) livin in (A) para-di-i-ise (em)
-
 (em) oh ~ oh We (G)|[em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
-(D)remember her (A) fondly some (em) ti-mes
-
-(em) she-twist her (G) wish into a (D) melody (A) ... <oh-ohh-ohh>
-(em) she-twist her (G) wish into a remedy (D) ... <ah-ahh-ah>
-(em) she-twist her  (G) wish into a fantasy (D) ... [hold_2X]
+(D)remember her(A) fondly some (em) ti-mes
+[FILLZ:2:3-2,3-2,3/7\~5]
+(em) she twist her (G) voice into a (D) meolody (A) ... <oh-ohh-ohh>
+(em) she-twist-ed (G) vice into a remedy (D) ... <ah-ahh-ah>
+(em) and she twist her (G) wish into a fantasy (D) ... [hold_2X]
 (A) life... <li - i - i - i - ife> ... [hold_2X]
 [A:1:3-0,3-0,1:3,3/]
-
-
 (em) castle, on a (G) hill
-she can (D)dance for-(A)-ev-(A7)-er <clap,clap>
-(em) but all good (G) townspeople
-(D) gotta go to (A) to work <woah-oh> 
+she'll (D)dance for-(A)-ev-(A7)-er <clap,clap>
+(em) while all good (G) townspeople
+(D) just go about their (A) day <woah-oh> 
 (em) she leaves them (G) all behind 
 for (D) /an-i-mals\ she (A) finds in the (em) fo-rest, 
 With her (G) dog, a cat, a (D) bird and a (A) deer.<yeah-ah>
+<sing with me now>
+<clap ... clap> 1, 2
+
 [A:1:3-0,3-0,3,3/...]
-
 [CHORUS2, still subdued]
-(em) oh ~ (G) oh,  take a (D) look in a (A) mirr-(A7)-or 
-(em) once upon a (G) ti-ime <clap,clap>
-
-(D) livin a (A) fabulous life (em)
-
+(em) oh ~ (G) oh,  take a (D) look in the (A) mirr-(A7)-or 
+(em) once upon a (G) ti-ime 
+(D) we were living in (A) par-a-di-ise (em)
 (em) oh ~ oh .. We (G)|[V:em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
  re(D)member it (A) fondly at (em) ti-mes
-
-(em) twist your (G) wish into a (D) melody (A) ...<oh-ohh-ohh>
-(em) twist your (G) wish into a remedy (D) ...<ah-ahh-ah>
-(em) twist like (G) hell until you remedy (D) ... [hold_2X]
-(A) your life... <li - i - i - i - ife>
-[A:2:3-2,3-2,2:5/7\~] 
-
+ [FILLZ:em:2:3-2,3/5-3-2-0\]
+(em) she twisted (G) fate into a (D) melody (A) ...<oh-ohh-ohh>
+(em) she twisted (G) tears into a remedy (D) ...<ah-ahh-ah>
+(em) she twist her (G) wish into a fantasy (D) ... [hold_2X]
+(A) life... <li - i - i - i - ife>
+[A:2:3-2,3-2,2:5/7\~...] 
 (em) princess on her (G) throne
 in a (D) Ivory (A) Tower <clap,clap>
-(em) roses on her (G) pillow
-but no (D) key to her (A) heart <whoa-oh>
+(em) red rose on (G) pillow
+with no (D) key to her (A) heart <whoa-oh>
 (em) from Crystal Palace  
 (G) she can (D) see all the (A) way from her
-(em) valley to the (G) sea
-but can (D) never ever (A) get there
-
+(em) valley to the (G) sea <ee>
+but can (D) never ever (A) go <ohhhhh>
 (XX) cause shes not free (XX) [scratchy-voice]
-(NC) she gotta runaway... (NC)
-
 <clap ...clap>
-
+(NC) she a runaway... (NC)
+<clap ...clap>
 [Verse3: building up]
 (em) first she gotta  (G) work
 in a (D) downtown (A) job that she (em) hates
 eight days a (G) week, she slaves
 no (D) ene-rgy (A) left for her-(em)-self
-But that is (G) how she finds
-e(D)scape that ex(A)ists in her (em) minds eye
-(em) twist a (G) wish into a (D) fabulous (A) life <yeah-ah>
-
+that is (G) how she finds a fire e(D)scape 
+(A) in her (em) minds eye
+(em) twist her (G) wish into a (D) fabulous (A) life <yeah-ah>
 [A:1:3-0,3-0,1:3,3/...]
-
 [BRIDGE:_]
-One, kiss of fire, and its all over, and
-
-One, little spark, and we are all gone.
-
-(XX) shes gotta runaway (XX) [scratchy-voice]
-
-
+One, breath of fire, and its all over, and
+One, little spark, and its all gone.
+(XX) shes a runaway (XX) [scratchy-voice]
+(NC) in modern day (NC) <clap,clap>
 [CHORUS3:_medium]
-
-(em) oh ~ (G) oh, She-took-a (D) look in the (A) mirr-(A7)-or 
+(em) oh ~ (G) oh,  take a (D) look in the (A) mirr-(A7)-or 
 (em) once upon a (G) ti-ime <clap,clap>
-
-(D) livin in (A) para-di-ise (em) 
-
+(D) livin a (A) fabulous li-ife (em) 
 (em) oh ~ oh .. we (G)|[V:em+3:4,3:2\4:4,3:2\4:4,][XX,D,A]
  re(D)member her (A) fondly some (em) ti-mes
 
-(em) she twist her (G) wish into a (D) fantasy (A) ...<oh-ohh-ohh>
-(em) she twist her (G) wish into a fantasy (D) ...<ah-ahh-ah>
+[FILLZ:(thumbpick)]
+
+(em) she twist her (G) voice into a (D) melody (A) ...<oh-ohh-ohh>
+(em) she twist her (G) waist in beat with harmony (D) ...<ah-ahh-ah>
 (em) she twist her (G) wish into a fantasy (D) ... [hold_2X]
 (A) life... <li - i - i - i - ife>
 [A:2:3-2,3-2,1:3,3/...] 
+[BRIDGE:_THUMBPICK]
+One, breath of fire, and its all over, but
+One, lovely ember, of love,
+ and we are all... one.
+(XX)(NC)else we all fall down...(NC)
 
-
-[BRIDGE:_]
-One, kiss of fire, and its all over, but
-
-One, lonely ember, and we are all one.
-
-
-(XX)(NC)our princess...(NC)
-
-(em) plays hide and (G) seek
+(em) playing hide and (G) seek
 in a (D) tranquil (A) forest <clap,clap>
 (em) with candy treats (G) to keep the
 (D) dragons (A) employed <yeah-ah>
-(em) Then late at (G) night, as they
+(em) Then late at (G) night, they go to
 (D) raid a courtyard (A) gar-den <woah>
 (em) one breath of (G) fire,
 and it (D) all is dist(A)royed. <yeah-ah>
 (em) one breath of (G) fire,
 and it (D) all... is (A) ashes [hold_2X]
-
 (XX) and we all fall dow-wn. <whisper>
-
 [OUTSECTION:_embellishment]
 [e:2:3,1:0, G:2:3,1:0, D:1:2,0, A:2:3,2]
 (em) one [hold_4X]
-(em) kiss of (G) fire ... [hold_4X]
+(em) breath of (G) fire ... [hold_4X]
 and its (D5) all..[hold_4X]
-(A5) over 
+(A5) ashes 
 (em) one [hold_4X]
 (em) little (G) spark ... [hold_4X]
 and we're (D5) all..[hold_4X]
 (A5) one
-
 [A:2:2~3]
-
 [ROCK-OUT]
 [e:2:3,1:0|e:2:3,1:0]
 [G:2:3,1:0|G:2:3,1:0]
@@ -167,7 +169,6 @@ and we're (D5) all..[hold_4X]
 [G:2:3,1:0|G:1:3-2__]
 [D:1:2-0__|D:1:2-0__]
 [A:2:3-2__|A:2:3~2~3~2...__]
-
 (em) one [hold_4X]
 (em) lonely (G) ember ... [hold_2X]
 brings a (D5) spark...[hold_2X]
@@ -177,7 +178,6 @@ brings a (D5) spark...[hold_2X]
 brings a (D5) heart...[hold_2X]
 (A5) to the da-ark
 <ah-ah-ah-ahhhh-aaa>
-
 [P2----ENHANCED]
 [e:2:3,1:0|e:2:3,1:0]
 [G:2:3,1:0|G:1:3-2__]
@@ -188,8 +188,7 @@ brings a (D5) heart...[hold_2X]
 [G:2:3,1:0|G:1:3-2__]
 [D:1:2-0__|D:1:2-0__]
 [A:2:3-2__|A:2:3~2~3~2...3]
-
-(em - open...)[fade-out]
+(em - closed...)[fade-out]
 (NC) And the princess lives, happily ever, af-ter (NC)
 [THE_END]
 
@@ -200,6 +199,42 @@ brings a (D5) heart...[hold_2X]
 < and optional | Sub_Title ancestory | ... ~ ... |>
 
 ## [EXTRA_VARIATIONS:]
+
+ONE_HEART_SPARKZ
+(em) one [hold_4X]
+(em) little (G) girl ... [hold_2X]
+so all (D5) a-alo-one...[hold_2X]
+(A5) in a great big world, oh-oh
+(em) one [hold_4X]
+(em) lovely (G) heart... [hold_2X]
+to make us (D5) whole..
+(A5) and bring us to one again
+<whistle>
+
+one little girl
+one lovely heart
+to make us whole again
+wonders aloud
+where are you now
+where have you been
+when are you comin back
+
+
+one little girl
+so all alone
+in a great big world
+one lovely heart
+help us heal again
+make us whole again
+one little spark
+at the core of the heart
+will bring us all right back to...
+one 
+
+
+one lonely ember
+help us remember
+to breathe again
 
 
 [CHORUS4 - outro - variation]

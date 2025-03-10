@@ -78,6 +78,33 @@ And EXPLORES a DIVERSE SPECTRUM of AI modalities...
 
 ## METHODOLOGY
 
+The following are various strategies to use AI to write STORYSONGZ.
+
+### SONG_a_DAY CHALLENGE!
+
+- First there will be 1 SONG a MONTH.
+- Then 1 SONG a WEEK.
+- Ending with 1 SONG a DAY.
+
+Community will vote on their favorites.
+I will show how it is made and people can be inspired to use the variations to write their own.
+
+### INSPIRATIONS.
+
+It appears that inspirations are the key to crafting music, not so much the creative ability. This is to say we need paint before we can be a painter - the inspiration is secondary. 
+
+So with STORYSONGZ, we us AI to supply all the variables - then as humans - we fill in the blanks.
+
+The following are examples.
+
+### AI GENERATIVE MUSIC:
+
+#### LYRICS
+
+- SOCIAL PHRASES
+
+- 
+
 STEP ONE: CUSTOM AI PROMPT 
 
 Write a song that people will love! 
@@ -112,6 +139,25 @@ Use these ORIGINAL LYRICS as an example:
 
 ...
 
+## SOCIAL MEDIA STRATEGY:
+
+  Posts:
+
+   - SONG PERFORMANCE SHORT | MEDIUM | LONG
+
+   - SING_a_LONG (LYRIC view)
+
+   - PLAY_a_LONG (HAND_PLAY view)
+
+   - INSTRUMENTAL (instruction)
+
+   - INSTRUMENTAL (performance)
+
+   - POEM ANALYSIS (STORYSONGZ)
+
+   - MUSIC VIDEO (GenAI)
+
+   - FAN ART (appreciation)
 
 ### ENDLESS_VARIATIONZ
 
@@ -258,3 +304,27 @@ Think of a story that is told in an ANIMATED MOVIE. But also a SONG. In TEXT, an
 ### AI_HUMANZA
 
 A group is formed for all_humanz, if you are interested, reach out - and tell friends. This group is for CURIOUS ARTISTS to befriend each other, and PROMOTE EACH OTHER in a DIGITAL_ART_CLAN: memberships, and SOCIAL RECOGNITION with AWARDS. 
+
+AI_aLYRIXza aLYRIXaELIXERa
+
+PRINCIPLES of aLYRIXa (actual actz of lyrix)
+
+1) EVERYTHING_IS_OPTIONAL_ALWAYZ.
+
+2) Ideally, Lyrix tell a story.
+
+3) Ideally, Lyrix are singable, and easily memorable.
+
+4) Ideally, Lyrix are intelligible, audible.
+
+5) Ideally, Lyrix contain a decipherable MSG or MORAL
+
+5) Ideally, Lyrix are an ENCODING of human experience into digital transcendence, well beyond your life.
+
+6) Ideally, Lyrix are accessible by txt: script, poem, & caption.
+
+7) Lyrix are a remedy to the ailmentz of aSocioaDissaToxia.
+
+### EXTREME MULTI-MODE
+
+whistle

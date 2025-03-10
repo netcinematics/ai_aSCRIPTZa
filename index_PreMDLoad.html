@@ -264,7 +264,7 @@ button {
     color: steelblue;
     border: 1px solid aqua;
     border-radius: 13px;
-    padding: 8px;
+    padding: 8px 16px;
     cursor: pointer;
     transition: all 0.3s ease;
     min-width: 100px;
@@ -393,7 +393,7 @@ nav {
     border: 1px solid aqua;
 }
 
-.countUpTimer-display {
+.timer-display {
 
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
@@ -403,45 +403,8 @@ nav {
     border: 1px solid aqua;
     font-family: monospace;
     font-size: 1.2em;
-    display: block;
+    display: none;
     margin-left: 2em;
-}
-
-.topLINE {
-    position: fixed;
-    left: 0;
-    top: 40%;
-    transform: translateY(-40%);
-    width: 100%;
-    height: 1px;
-    background-color: teal;
-    box-shadow: 0 0 8px 3px rgba(0, 128, 128, 0.5);
-    display: none;
-    z-index: 1001;
-}
-/* .midLINE {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 1px;
-    background-color: hsla(60, 100%, 50%, 0.25);
-    box-shadow: 0 0 4px yellow;
-    display: none;
-    z-index: 1001;
-} */
-.btmLINE {
-    position: fixed;
-    left: 0;
-    top: 60%;
-    transform: translateY(-60%);
-    width: 100%;
-    height: 1px;
-    background-color: hsla(300, 100%, 50%, 0.5);
-    box-shadow: 0 0 9px 3px purple;
-    display: none;
-    z-index: 1001;
 }
 </style>
 </head>
@@ -562,15 +525,13 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     display: flex; flex-direction: column; gap:4px;
     padding: 1em 5%">
     <div class="control-row" style="justify-content: space-between;">
-        <button onclick="EDIT_prevTXT()" style="display: flex;justify-content: center;font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;
-        text-shadow: -1px 1px 1px blue;">◀</button>
+        <button onclick="EDIT_prevTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;"><</button>
         <span id="currentIndexDisplay" style="font-size: 1.222em; color: steelblue;">0</span>
         <!-- <script>  function updateCurrentIndexDisplay() {
                 document.getElementById('currentIndexDisplay').textContent = TXT_IDX?(TXT_IDX + 1):1;
             }; updateCurrentIndexDisplay();
         </script> -->
-        <button onclick="EDIT_nextTXT()" style="display: flex; justify-content: center;font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;
-        text-shadow: -1px 1px 1px blue;">▶</button>
+        <button onclick="EDIT_nextTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;">></button>
     </div>
     <div class="control-row" style="justify-content: space-between;    margin-top: 1em;">
         <label for="EDIT_TXT_TITLE_MAIN">MAIN-TITLE:</label>
@@ -587,8 +548,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     <div class="control-group">
         <label style="min-width: 6em;" for="EDIT_TXT_VERSION">VERSION:</label>
         <input id="EDIT_TXT_VERSION" type="text" id="version" placeholder="Number"
-        style="color:aqua; width:22%;height: 0.333em;
-    margin: 1em 0;">
+        style="color:aqua; width:22%;">
     </div>    
     <div class="control-group" style="display: flex; flex-direction: column;">
         <label for="EDIT_TXT_TXT">TXT:</label>
@@ -653,17 +613,16 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
             const description = document.getElementById('EDIT_TXT_DESCRIPTION').value || '';
 
             let txtDOC = getTXT_DOC(main_title);
-            let txtSPEED = txtDOC?txtDOC.speed:'100';
             let doc_id = main_title.trim()+' | '+sub_title.trim()+' | '+version.trim()+' | '+current_ymd ;
             if (txtDOC) { //overwrite : MUST ADD NEW DATA ATTRIBUTES HERE or they will be lost
                 txtDOC = { id:doc_id ,main_title: main_title, sub_title: sub_title, txt: txt,
-                    version: version, description:description,speed:txtSPEED 
+                    version: version, description:description,speed:txtDOC.speed||'100' 
                 };
                 ai_aSCRIBEa_DATA["TXTZ"][TXT_IDX] = txtDOC;
             } else { //new
                 ai_aSCRIBEa_DATA["TXTZ"].push({
                     main_title: main_title, sub_title: sub_title, txt: txt,
-                    version: version, description:description,speed:txtSPEED
+                    version: version, description:description,speed:txtDOC.speed||'100'
                 });
                 TXT_IDX = ai_aSCRIBEa_DATA["TXTZ"].length - 1;
             }
@@ -699,50 +658,6 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         }; init_EDIT_VIEW(); updateCurrentIndexDisplay();
     </script>
         </div>
-        <div class="controlBar backupBar" style="border:1px solid steelblue; border-radius:13px; margin-top: 1em;">
-            <div class="controls-group">
-                <input type="file" 
-                    id="mdFileInput" 
-                    accept=".md" 
-                    style="display: none;" 
-                    onchange="handleFileUpload(event)">
-                <button onclick="document.getElementById('mdFileInput').click()" 
-                        class="editBtn">UpLoad MD</button>
-                <button onclick="loadMarkdownById()" 
-                        class="editBtn">Load MD</button>
-                <button onclick="saveMarkdown()" 
-                        class="editBtn">DownLoad MD</button>
-            </div>
-        </div>
-        <script>
-            async function handleFileUpload(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    try {
-                        const text = await file.text();
-                        document.getElementById('EDIT_TXT_TXT').value = text;
-                        showUSRMSG('File uploaded successfully');
-                    } catch (error) {
-                        console.error('Error reading file:', error);
-                        showUSRMSG('Failed to read file');
-                    }
-                }
-            }
-
-            async function loadMarkdownById() {
-                try {
-                    const id = ai_aSCRIBEa_DATA['TXTZ'][TXT_IDX].id;
-                    const response = await fetch(`./SONGS/${id}.md`);
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    const text = await response.text();
-                    document.getElementById('EDIT_TXT_TXT').value = text;
-                    showUSRMSG('File loaded successfully');
-                } catch (error) {
-                    console.error('Error loading file:', error);
-                    showUSRMSG('Failed to load file');
-                }
-            }
-        </script>
     </div>
 </article><!--END EDIT VIEW-->
 
@@ -753,12 +668,8 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         <input type="text" id="PLAYBACK_TXT_TITLE" placeholder="Title..." 
             style="color:burlywood; margin-bottom: 1em;">
         </input>
-        <button onclick="PLAY_prevTXT()" style="font-size:1.222em;font-weight:bold;
-        display: flex;justify-content: center;line-height: 0.666em;min-width:3em;
-        text-shadow: -1px 1px 1px blue;">◀</button>
-        <button onclick="PLAY_nextTXT()" style="font-size:1.222em;font-weight:bold;
-        display: flex;justify-content: center;line-height: 0.666em;min-width:3em;
-        text-shadow: -1px 1px 1px blue;">▶</button>
+        <button onclick="PLAY_prevTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width:3em;text-shadow: -1px 1px 1px blue;">◀</button>
+        <button onclick="PLAY_nextTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width:3em;text-shadow: -1px 1px 1px blue;">▶</button>
         <!-- <button onclick="PLAY_prevTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;">◀️</button>
         <button onclick="PLAY_nextTXT()" style="font-size:1.222em;font-weight:bold;line-height: 0.666em;min-width: 4em;text-shadow: -1px 1px 1px blue;">▶️</button> -->
         <button id="toggleSize" onclick="toggleFrameSize()" 
@@ -787,7 +698,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
                 </select>
             </div>
             <button id="autoScrollBtn">Auto Scroll</button>
-            <div id="countUpTimer" class="countUpTimer-display">00:00</div>
+            <div id="timer" class="timer-display">00:00</div>
         </div>            
     </div>
 
@@ -858,7 +769,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     let isSelectAllChecked = false;
     let isUserScrolling = false;
     let startTime = null;
-    let countUpTimerDisplay = null;
+    let timerDisplay = null;
 
     // Add scroll event listener
     document.getElementById('renderTokenFrame').addEventListener('scroll', function(e) {
@@ -868,7 +779,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     });
 
     function smoothScroll(timestamp) {
-        updatecountUpTimer(timestamp);
+        updateTimer(timestamp);
         const frame = document.getElementById('renderTokenFrame');
         const speed = parseInt(document.getElementById('scrollSpeed').value);
         
@@ -890,13 +801,13 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         scrollAnimationFrame = requestAnimationFrame(smoothScroll);
     }
 
-    function updatecountUpTimer(timestamp) {
+    function updateTimer(timestamp) {
         if (!startTime) startTime = timestamp;
         const seconds = Math.floor((timestamp - startTime) / 1000);
         const minutes = Math.floor(seconds / 60);
         const displaySeconds = String(seconds % 60).padStart(2, '0');
         const displayMinutes = String(minutes).padStart(2, '0');
-        document.getElementById('countUpTimer').textContent = `${displayMinutes}:${displaySeconds}`;
+        document.getElementById('timer').textContent = `${displayMinutes}:${displaySeconds}`;
     }
 
     function countdown() {
@@ -925,10 +836,8 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
 
     async function toggleAutoScroll() {
         const btn = document.getElementById('autoScrollBtn');
-        const countUpTimer = document.getElementById('countUpTimer');
-        const topLINE = document.getElementById('topLINE');
-        // const midLINE = document.getElementById('midLINE');
-        const btmLINE = document.getElementById('btmLINE');
+        const timer = document.getElementById('timer');
+        const frame = document.getElementById('renderTokenFrame');
         
         if (scrollAnimationFrame) {
             cancelAnimationFrame(scrollAnimationFrame);
@@ -936,17 +845,22 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
             lastTimestamp = null;
             startTime = null;
             btn.textContent = 'Auto Scroll';
-            // countUpTimer.style.display = 'none';
-            topLINE.style.display = 'none';
-            // midLINE.style.display = 'none';
-            btmLINE.style.display = 'none';
+            timer.style.display = 'none';
         } else {
+            // Check if scrolled to bottom
+            if (frame.scrollTop >= frame.scrollHeight - frame.clientHeight) {
+                frame.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+                scrollTopFloat = 0;
+                // Wait for scroll to complete
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+            
             btn.textContent = 'Stop Scrolling';
-            // timer.style.display = 'block';
+            timer.style.display = 'block';
             await countdown();
-            topLINE.style.display = 'block';
-            // midLINE.style.display = 'block';
-            btmLINE.style.display = 'block';
             startTime = null;
             scrollAnimationFrame = requestAnimationFrame(smoothScroll);
         }
@@ -1054,8 +968,6 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         }
     }
 
-    let currentEditableRow = null;
-
     function makeEditable(element, event) {
         if (event) {
             event.stopPropagation();
@@ -1065,45 +977,25 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
         if (event && event.target.classList.contains('edit-input')) {
             return;
         }
-
+    
         const row = element.dataset.row;
-        
-        // Save current editable row if exists
-        if (currentEditableRow && currentEditableRow !== row) {
-            const currentInput = document.querySelector(`[data-row="${currentEditableRow}"] .edit-input`);
-            if (currentInput) {
-                saveInline_EDIT(currentEditableRow);
-            }
-        }
-
-        currentEditableRow = row;
         const originalText = element.innerText;
-        
         element.innerHTML = `
             <input type="text" 
                 value="${originalText}" 
                 class="edit-input" 
                 onclick="event.stopPropagation()"
-                onkeydown="handleEditKeypress(event, ${row})"
                 style="width: 80%;
                        color: inherit;
                        font-size: inherit;
                        line-height: inherit;">
-            <button onclick="saveInline_EDIT(${row})" class="save-btn">Save</button>
-            <button onclick="cancelEdit(${row}, '${originalText}')" class="cancel-btn">Cancel</button>
+            <button onclick="saveInline_EDIT(${row})" class="save-btn" style="font-size:12px;line-height:8px;">Save</button>
+            <button onclick="cancelEdit(${row}, '${originalText}')" class="cancel-btn" style="font-size:12px;line-height:8px;">Cancel</button>
         `;
         element.querySelector('.edit-input').focus();
     }
 
-    function handleEditKeypress(event, row) {
-        if (event.key === 'Enter') {
-            event.preventDefault();
-            saveInline_EDIT(row);
-        }
-    }
-
     function cancelEdit(row, originalText) {
-        currentEditableRow = null;
         const element = document.querySelector(`[data-row="${row}"]`);
         if (element) {
             const token = TOKEN_DATASET.find(t => t.row === parseInt(row));
@@ -1113,7 +1005,6 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     }
 
     function saveInline_EDIT(row) {
-        currentEditableRow = null;
         const input = document.querySelector(`[data-row="${row}"] .edit-input`);
         const token = TOKEN_DATASET.find(t => t.row === parseInt(row));
         if (token && input) {
@@ -1168,7 +1059,6 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
             TXT_IDX = ai_aSCRIBEa_DATA["TXTZ"].length - 1;
         }
         renderPLAYBACK_VIEW();
-        // toggleFrameSize(2);
     }
 
     function PLAY_nextTXT() {
@@ -1178,36 +1068,11 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
             TXT_IDX = 0;
         }
         renderPLAYBACK_VIEW();
-        // toggleFrameSize(2);
     }
 
     function renderPLAYBACK_VIEW() {
         renderTokensFromTXT();
         setScrollSpeed();
-        setCheckboxes();
-        // Ensure maximized state persists
-        if (sizeState === 2) {
-            const frame = document.getElementById('renderTokenFrame');
-            const RENDER_CONTROLS = document.getElementById('RENDER_CONTROLS');
-            // const controls = document.querySelector('.control-row');
-            // const hint = document.querySelector('.keyboard-hint');
-            frame.classList.add('maximized');
-            RENDER_CONTROLS.classList.add('hidden');
-            // controls.classList.add('hidden');
-            // hint.classList.add('hidden');
-        }
-    }
-
-    function setCheckboxes() {
-        const checkboxes = document.querySelectorAll('.checkboxFrame');
-        const frame = document.getElementById('renderTokenFrame');
-        
-        // Hide checkboxes if frame is maximized or minimized
-        if (frame.classList.contains('maximized') || frame.classList.contains('middle-size')) {
-            checkboxes.forEach(cb => cb.classList.add('hidden'));
-        } else {
-            checkboxes.forEach(cb => cb.classList.remove('hidden'));
-        }
     }
 
     function saveScrollSpeed(){
@@ -1259,51 +1124,40 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
     }
 
     let isMaximized = false;
-    let sizeState = 2; // 0=min, 1=300px, 2=max (default)
+    let sizeState = 0; // 0=min, 1=300px, 2=max
 
     function toggleFrameSize(init) {
         const frame = document.getElementById('renderTokenFrame');
-        // const controls = document.querySelector('.control-row');
-        const RENDER_CONTROLS = document.getElementById('RENDER_CONTROLS');
+        const controls = document.getElementById('RENDER_CONTROLS');
         // const hint = document.querySelector('.keyboard-hint');
         const btn = document.getElementById('toggleSize');
-        const checkboxes = document.querySelectorAll('.checkboxFrame');
         
         sizeState = (sizeState + 1) % 3;
         sizeState = init ? init : sizeState;
         
         switch(sizeState) {
-            case 0: // edit mode
-            console.log('edit mode');
+            case 0: // min
                 frame.classList.remove('maximized', 'middle-size');
-                RENDER_CONTROLS.classList.remove('hidden');
-                // controls.classList.remove('hidden');
+                controls.classList.remove('hidden');
                 // hint.classList.remove('hidden');
-                checkboxes.forEach(cb => cb.classList.remove('hidden'));
                 btn.innerHTML = '<span>▲</span>';
                 break;
-            case 1: // 300px minimize
-            console.log('300px minimize');
+            case 1: // 300px
                 frame.classList.remove('maximized');
                 frame.classList.add('middle-size');
-                RENDER_CONTROLS.classList.add('hidden');
-                // controls.classList.add('hidden');
-                // hint.classList.add('hidden');
-                checkboxes.forEach(cb => cb.classList.add('hidden'));
+                controls.classList.remove('hidden');
+                // hint.classList.remove('hidden');
                 btn.innerHTML = '<span>△</span>';
                 break;
             case 2: // max
-            console.log('max');
                 frame.classList.add('maximized');
                 frame.classList.remove('middle-size');
-                RENDER_CONTROLS.classList.add('hidden');
-                // controls.classList.add('hidden');
+                controls.classList.add('hidden');
                 // hint.classList.add('hidden');
-                checkboxes.forEach(cb => cb.classList.add('hidden'));
                 btn.innerHTML = '<span>▼</span>';
                 break;
         }
-    } //toggleFrameSize(2);
+    } toggleFrameSize(2);
 
     // Initialize metadata structure if not exists
     if (!ai_aSCRIBEa_DATA["METADATA"]) {
@@ -1337,38 +1191,7 @@ font-size: 0.888em; color: steelblue;margin: 8px 0 8px 0;">aSCRIBEa</h1>
             height: 1
         };
     }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const frame = document.getElementById('renderTokenFrame');
-        const RENDER_CONTROLS = document.getElementById('RENDER_CONTROLS');
-        // const controls = document.querySelector('.control-row');
-        // const hint = document.querySelector('.keyboard-hint');
-        const btn = document.getElementById('toggleSize');
-        const checkboxes = document.querySelectorAll('.checkboxFrame');
-        
-        // Set initial maximized state
-        frame.classList.add('maximized');
-        RENDER_CONTROLS.classList.add('hidden');
-        // controls.classList.add('hidden');
-        // hint.classList.add('hidden');
-        checkboxes.forEach(cb => cb.classList.add('hidden'));
-        btn.innerHTML = '<span>▼</span>';
-    });
-
-    document.addEventListener('keydown', function(event) {
-        // Check if playback view is active
-        const playbackView = document.getElementById('NAV_PLAYBACK');
-        if (playbackView.style.display === 'block' && event.code === 'Space') {
-            event.preventDefault(); // Prevent page scroll
-            toggleAutoScroll();
-        }
-    });
-
 </script>
-
-<div id="topLINE" class="topLINE"></div>
-<!-- <div id="midLINE" class="midLINE"></div> -->
-<div id="btmLINE" class="btmLINE"></div>
 
 <footer id="NAV_MENU" class="pcStyle" style="display:flex;justify-content:space-evenly;margin:0 auto; 
 background-image: linear-gradient(grey, #052f52, black);height: 2em;
@@ -1439,42 +1262,8 @@ function showPLAYBACK() {
     NAV_EDIT.style.display = 'none';
     NAV_PLAYBACK.style.display = 'block';
     renderPLAYBACK_VIEW();
-    // toggleFrameSize(2);
 }
 </script>
-<script>
-    //add code to load data from .md file
-    async function loadMarkdown() {
-        try {
-            const response = await fetch('./SONGS/Secret_to_Life.md');
-            if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`);}
-            const markdownText = await response.text();
-            // Set the markdown content to the text area
-            // document.getElementById('EDIT_TXT_TXT').value = markdownText;
-        } catch (error) {
-            console.error('Could not load markdown file:', error);
-            showUSRMSG('Failed to load markdown file');
-        }
-    }; window.onload = loadMarkdown;
-    // Call the function to load the markdown file when the page loads
 
-    //add code to save data to .md file
-    async function saveMarkdown() {
-        const markdownText = document.getElementById('EDIT_TXT_TXT').value;
-        // const filename = document.getElementById('EDIT_TXT_TITLE_MAIN').value + '.md';
-        const filename = `${ai_aSCRIBEa_DATA['TXTZ'][TXT_IDX].id}.md`;
-        // Create a blob from the markdown text
-        const blob = new Blob([markdownText], { type: 'text/markdown' });
-        // Create a download link
-        const downloadLink = document.createElement('a');
-        downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = filename;
-        // Programmatically click the link to trigger the download
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        // showUSRMSG('Markdown file saved!');
-    }
-</script>
 </body>
 </html>
