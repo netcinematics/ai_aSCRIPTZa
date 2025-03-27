@@ -1,17 +1,38 @@
 # ai_aSCRIPTZa
-Made with ai. LocalStorage files for multi purpose (text) SCRIPTS. Including ability to auto scroll for playback during recording.  With playback speed settings so that it is adjustable at runtime.. Also ai integration point to generate song lyrics.
+Made with ai. LocalStorage files for multi purpose (text) SCRIPTS for SONG_LYRICS. 
 
----
-
-# AI_aSONGZa
+Toolz like:
+- STT and WAV,
+- with auto scroll for PLAYBACK!
+- genr8 song lyrics.
+- vari8 endlessly!
+- GenAI content pipeline.
 
 ----
 
 ### OVERVIEW
 
-This is a very exciting document. I've been working a lifetime to produce this work. The original C++ Tokenizer was created using NLP technology in 2001. Since then, many RARE LLM sets cultivated. Multiple breakthroughs. Compatible to synthesize with various - modern neural networks modalities.
+So exciting! This is the source code for a YouTubeSeries on AI CodeGen. 
 
-The surprise, was in "extensibility" of english language... into ai, as a hybrid language. Then of the cognitive effect on human user.
+Waaay back, in year 1999, an AI project was started, called THE_MUSICAL_BLENDER.
+
+A simple algorithm, was crafted in C++ - to RHYME SONG LYRICS for new rock songs!
+
+So, a Tokenizer was built using NLP technology in 2002. 
+
+And an EXTREMELY UNIQUE LLM was cultivated. With a PERPLEXING side-effect. It became a massive WORDGAME of RHYMES, called aWORDaGAME [pronounced like ORAGAMI]
+
+Multiple AI insights resulted in aWORDaGAME: 
+
+- Synthesize neural network modalities.
+- Local Storage (long term memory)
+- Custom Token Sets
+
+The big surprise came, with "combinability" of the tokens, when combined with English. It was a clever solution for semantic labels, that ... evolved organically.
+
+"COMBINABILITY" allows for TOKENS to "combine" together...unwittedly reflecting new concepts and (sometimes), sparking an epiphany of a reflection of actual reality. 
+
+language... after innovating an  extra_text_into ai, as a hybrid language. Then of the cognitive effect on human user.
 
 Please Enjoy.
 
